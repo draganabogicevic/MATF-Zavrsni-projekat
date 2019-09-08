@@ -1,0 +1,248 @@
+body
+{
+  background-color: lemonchiffon !important;
+  width:100%;
+  height:100%;
+}
+.nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.navbar-brand 
+{
+	padding-left:50px!important; 
+}
+
+.nav-link
+{
+	font-weight:600;
+	font-size: 16px;
+	padding-right: 20px!important;
+}
+.nav-link:hover
+{
+  color:rgb(255, 165, 0) !important;
+}
+@keyframes myanimation
+{
+    from {
+        left: 0%;
+    }
+  to {
+      left:100%;
+    }    
+}
+
+@-webkit-keyframes myanimation{
+  
+    from {
+        left: 0%;
+    }
+  to {
+      left:100%;
+    }    
+} 
+
+#img5{
+   animation-name: myanimation;
+  -webkit-animation-name: myanimation;
+  animation-iteration-count: 10;
+  -webkit-animation-iteration-count: 10;
+}
+/* #img4{
+  
+  animation-name:myanimation;
+  animation-delay: 1s;
+  animation-iteration-count: 10;
+}
+#img3{
+  
+  animation-name:myanimation;
+  animation-delay: 2s;
+  animation-iteration-count: 10;
+}
+#img2{
+  
+  animation-name:myanimation;
+  animation-delay: 3s;
+  animation-iteration-count: 10;
+}
+#img1{
+  
+  animation-name:myanimation;
+  animation-delay: 4s;
+  animation-iteration-count: 10;
+} */
+/* #section3
+{
+  font-family: "My Custom Font2";
+  font-size:20px;
+  padding:40px;
+}
+input{
+  outline: 1px solid crimson;
+  background-color: rgba(100,100,100,0.3);
+  color:crimson;
+} */
+
+ @font-face {
+  font-family: "My Custom Font";
+  src: url("Lobster.otf");
+}
+
+@font-face {
+  font-family: "My Custom Font3";
+  src: url("Bradley-Regular.ttf");
+}
+/*
+@font-face {
+  font-family: "My Custom Font2";
+  src: url("BRADHI.ttf");
+}
+
+#d1, #d2 {
+	font-family:"My Custom Font2";
+	font-weight: bold;
+	font-size:20px;
+  color:black;
+  border:1px solid black;
+  border-radius:20px; 
+  background-color:lemonchiffon; 
+  padding: 25px;
+  margin-top: 15px;
+} */
+/* #d2{
+ font-size:20px;
+ text-align: center;
+ height: 40%;
+}
+.projects
+{
+  text-align:center;
+  font-family: "My Custom Font";
+  color:brown;
+  font-size: 20px;
+  padding-top:6%;
+  padding-bottom: 12%;
+}
+
+.project{
+  height:200px;
+  width:200px;
+  border:2px solid orange;
+  border-radius: 12px;
+}
+#project1{
+background-image:url("pic1.jpeg");
+background-size: contain;
+
+
+}
+#project2{
+background-image:url("pic2.jpeg");
+background-size: contain;
+} */
+/* #project3{
+background-image:url("pic3.jpeg");
+background-size: contain;
+}
+.contentD 
+{
+  
+  width: 100%;
+  text-align: center; 
+}
+
+.button 
+{
+  margin:auto;
+  padding: 6px 10px;
+  background-color: orange;
+  color: black;
+  font-family:"My Custom Font";
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size:17px;
+  text-align: center;
+  text-transform: uppercase;
+
+} */
+/* a.button:hover
+{
+  color: brown;
+}
+#linx
+{
+  color:crimson;
+  font-weight: bold;
+  
+}
+#linx:hover
+{
+  color:brown;
+} */
+/* #section2{
+  background-color: rgb(206, 212, 206);
+  background-size: contain;
+  min-height: 600px;
+  width: 100%;
+
+} */
+/* .cl{
+  color:slategrey;
+}
+.cl:hover{
+color: crimson;
+}
+.j1{
+background-image: url("sakura.png") !important;
+} */
+#subheading1{
+  color:white;
+  margin-bottom: 25px;
+  /* text-decoration: underline; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+#hurryUp{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#button1{
+  display:inline-block;
+  border:orange;
+  border-radius: 10%;
+  background-color: rgb(247, 147, 34);
+  color:white;
+  padding: 2%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#animPhotos{
+  position:relative;
+  padding:0%;
+  margin:0%;
+  left:0%;
+}
+#section1
+{
+  margin:0%;
+  padding:0%;
+  font-family: "My Custom Font";
+  box-sizing: border-box;
+  background-color: rgb(61, 190, 61);
+  /* background-size: contain; */
+  min-height: 800px;
+  width: 100%;
+
+}
+ .jumbo
+{
+padding-top: 0px;
+padding-left:20%;
+padding-right: 20%;
+} 
+
