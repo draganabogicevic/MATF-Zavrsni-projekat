@@ -25,56 +25,189 @@ body
 {
   color:rgb(255, 165, 0) !important;
 }
-@keyframes myanimation
+
+.dropdown-item:hover
 {
-    from {
-        left: 0%;
-    }
-  to {
-      left:100%;
-    }    
+  color:rgb(255, 165, 0) !important;
+  background: none;
 }
 
-@-webkit-keyframes myanimation{
-  
-    from {
-        left: 0%;
-    }
-  to {
-      left:100%;
-    }    
-} 
 
-#img5{
-   animation-name: myanimation;
-  -webkit-animation-name: myanimation;
-  animation-iteration-count: 10;
-  -webkit-animation-iteration-count: 10;
-}
-/* #img4{
+
+.animatedarea{
+  background:  rgb(61, 190, 61);  
   
-  animation-name:myanimation;
-  animation-delay: 1s;
-  animation-iteration-count: 10;
+  width: 100%;
+  height:100%;
+  z-index: 2;
+ 
 }
-#img3{
+
+.animatedimages{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   
-  animation-name:myanimation;
+}
+
+.animatedimages li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(61, 190, 61);
+  background-image: url(raspberry.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  
+}
+
+.animatedimages li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  background-image: url(orange.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+.animatedimages li:nth-child(2){
+  left: 10%;
+  width: 65px;
+  height: 65px;
   animation-delay: 2s;
-  animation-iteration-count: 10;
+  animation-duration: 12s;
+  background-image: url(pasta.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-#img2{
-  
-  animation-name:myanimation;
-  animation-delay: 3s;
-  animation-iteration-count: 10;
-}
-#img1{
-  
-  animation-name:myanimation;
+
+.animatedimages li:nth-child(3){
+  left: 70%;
+  width: 55px;
+  height: 55px;
   animation-delay: 4s;
-  animation-iteration-count: 10;
-} */
+  background-image: url(ice-cream.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  background-image: url(grapes.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(5){
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 0s;
+  background-image: url(tea.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+  background-image: url(cherries.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+  background-image: url(chili.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+
+.animatedimages li:nth-child(8){
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  background-image: url(donut.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(9){
+  left: 20%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  background-image: url(burger.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.animatedimages li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  background-image: url(cupcake.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+
+@keyframes animate {
+
+0%{
+transform: translateY(0) rotate(0deg);
+opacity: 1;
+}
+
+25%{
+opacity: 1;
+}
+
+50%{
+  
+  opacity: 0.5;
+
+}
+75%{
+
+  opacity: 0.25;
+
+}
+
+100%{
+transform: translateY(-1000px) rotate(720deg);
+opacity: 0;
+}
+
+}
+
+
+
 /* #section3
 {
   font-family: "My Custom Font2";
@@ -237,6 +370,9 @@ background-image: url("sakura.png") !important;
   /* background-size: contain; */
   min-height: 800px;
   width: 100%;
+ 
+
+
 
 }
  .jumbo
@@ -244,5 +380,6 @@ background-image: url("sakura.png") !important;
 padding-top: 0px;
 padding-left:20%;
 padding-right: 20%;
+z-index: 1;
 } 
 

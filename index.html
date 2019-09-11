@@ -4,12 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+	<link rel="stylesheet" href="style.css">
 	<title> BelgradeRestos </title>
 </head>
 
@@ -31,17 +31,41 @@
 						<a class="nav-link text-white" href="index.html"> About <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link text-white" href="Druga.html"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item dropdown">
+						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <span
+								class="sr-only">(current)</span></a>
+							<div class="dropdown-menu bg-dark">
+								<a class="dropdown-item text-white" href="ambar.html">Ambar</a>
+								<a class="dropdown-item text-white" href="durmitor.html">Durmitor</a>
+								<a class="dropdown-item text-white" href="dvajelena.html">Dva jelena</a>
+								<a class="dropdown-item text-white" href="frans.html">Frans</a>
+								<a class="dropdown-item text-white" href="lorencoikakalamba.html">Lorenco i Kakalamba</a>
+								<a class="dropdown-item text-white" href="lovac.html">Lovac</a>
+								<a class="dropdown-item text-white" href="madera.html">Madera</a>
+								<a class="dropdown-item text-white" href="malafabrikaukusa.html">Mala fabrika ukusa</a>
+								<a class="dropdown-item text-white" href="sesirmoj.html">Sesir moj</a>
+
+							</div>
+						
+					</li>
+					<li class="nav-item">
 						<a class="nav-link text-white" href="#section2"> Register/Login <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#section3">EN/SR</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link text-white dropdown-toggle" href="#section3" data-toggle="dropdown"> EN/SR </a>
+						<div class="dropdown-menu bg-dark">
+							<a class="dropdown-item text-white" href="#">English</a>
+							<a class="dropdown-item text-white" href="serbian.html">Serbian</a>
+
+						</div>
+					
 					</li>
+					
 
 				</ul>
 			</div>
@@ -53,14 +77,21 @@
 	<!--jumbotron section -->
 	<section id="section1" class="jumbotron jumbotron-fluid">
 
-		<div id="animPhotos">
+	<div class="animatedarea" >
+					<ul class="animatedimages">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+					</ul>
 			
-			<!-- <img class="photos" id="img1" src="pasta.png">
-			<img class="photos" id="img2" src="tea.png">
-			<img class="photos" id="img3" src="burger.png">
-			<img class="photos" id="img4" src="cake.png"> -->
-			<img class="photos" id="img5" src="ice-cream.png">
-		</div>
+		
 		<div class="jumbo">
 
 
@@ -82,7 +113,7 @@
 			</div>
 
 		</div>
-
+	</div >
 	</section>
 
 	<!--section with row, col and offset classes to satisfy Bootstrap's grid rules-->
