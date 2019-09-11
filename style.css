@@ -1,6 +1,8 @@
 body
 {
-  background-color: lemonchiffon !important;
+  /*background-color: lemonchiffon !important;*/
+  background-image: url(2681677.jpg);
+  background-size: 100%;
   width:100%;
   height:100%;
 }
@@ -12,14 +14,14 @@ body
 }
 .navbar-brand 
 {
-	padding-left:50px!important; 
+	padding-left:50px !important; 
 }
 
 .nav-link
 {
 	font-weight:600;
 	font-size: 16px;
-	padding-right: 20px!important;
+	padding-right: 20px !important;
 }
 .nav-link:hover
 {
@@ -35,18 +37,18 @@ body
 
 
 .animatedarea{
-  background:  rgb(61, 190, 61);  
-  
   width: 100%;
   height:100%;
   z-index: 2;
+  background-image: url(2681677.jpg);
+  background-size: 100%;
  
 }
 
 .animatedimages{
-  position: absolute;
-  top: 0;
-  left: 0;
+ 
+  top: 0px;
+  left: 200px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -59,8 +61,7 @@ body
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(61, 190, 61);
-  background-image: url(raspberry.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
   animation: animate 25s linear infinite;
@@ -73,7 +74,7 @@ body
   width: 80px;
   height: 80px;
   animation-delay: 0s;
-  background-image: url(orange.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -85,7 +86,7 @@ body
   height: 65px;
   animation-delay: 2s;
   animation-duration: 12s;
-  background-image: url(pasta.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -95,7 +96,7 @@ body
   width: 55px;
   height: 55px;
   animation-delay: 4s;
-  background-image: url(ice-cream.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -106,7 +107,7 @@ body
   height: 60px;
   animation-delay: 0s;
   animation-duration: 18s;
-  background-image: url(grapes.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -116,7 +117,7 @@ body
   width: 50px;
   height: 50px;
   animation-delay: 0s;
-  background-image: url(tea.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -126,7 +127,7 @@ body
   width: 110px;
   height: 110px;
   animation-delay: 3s;
-  background-image: url(cherries.png);
+  background-image: url(transparent-spoon-gold-1.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -136,7 +137,7 @@ body
   width: 150px;
   height: 150px;
   animation-delay: 7s;
-  background-image: url(chili.png);
+  background-image: url(transparent-spoon-gold-1.png);
   background-repeat: no-repeat;
   background-size: 100%;
   
@@ -148,7 +149,7 @@ body
   height: 35px;
   animation-delay: 15s;
   animation-duration: 45s;
-  background-image: url(donut.png);
+  background-image: url(transparent-spoon-gold-2.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -159,7 +160,7 @@ body
   height: 40px;
   animation-delay: 2s;
   animation-duration: 35s;
-  background-image: url(burger.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -170,7 +171,7 @@ body
   height: 150px;
   animation-delay: 0s;
   animation-duration: 11s;
-  background-image: url(cupcake.png);
+  background-image: url(transparent-spoon-gold-4.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -354,19 +355,14 @@ background-image: url("sakura.png") !important;
   padding: 2%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#animPhotos{
-  position:relative;
-  padding:0%;
-  margin:0%;
-  left:0%;
-}
+
 #section1
 {
   margin:0%;
   padding:0%;
   font-family: "My Custom Font";
   box-sizing: border-box;
-  background-color: rgb(61, 190, 61);
+  color: white;
   /* background-size: contain; */
   min-height: 800px;
   width: 100%;
@@ -383,3 +379,27 @@ padding-right: 20%;
 z-index: 1;
 } 
 
+#ambar {
+  background-image: url(4103.jpg);
+  background-size: 100%;
+}
+
+#durmitor {
+  background-image: url(4095.jpg);
+  background-size: 100%;
+}
+
+#dvajelena {
+  background-image: url(4096.jpg);
+  background-size: 100%;
+}
+
+#frans {
+  background-image: url(4100.jpg);
+  background-size: 100%;
+}
+
+#lorenco {
+  background-image: url(4093.jpg);
+  background-size: 100%;
+}
