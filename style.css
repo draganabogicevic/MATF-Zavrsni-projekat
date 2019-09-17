@@ -201,7 +201,7 @@ background-size: contain;
  #section2{
   font-family: "My Custom Font";
   color:white;
-  background: url("section2pic1.jpg") no-repeat;
+  background: url(././photos/index/section2pic1.jpg) no-repeat;
   background-size: 100% 100%;
   min-height: 650px;
   width: 100%;
@@ -288,18 +288,23 @@ padding-right: 20%;
 } 
 
 #ambar {
-background-image: url(426060-PDV0HG-160.jpg);
+background-image: url(././photos/ambar/426060-PDV0HG-160.jpg);
 background-size: 100%;
 
 }
 
 #durmitor {
-  background-image: url(549556-PJZUEM-313.jpg);
+  background-image: url(././photos/durmitor/254237-P48QYH-494.jpg);
+  background-size: 100%;
+}
+
+#dvajelena {
+  background-image: url(././photos/dvaJelena/2768500.jpg);
   background-size: 100%;
 }
 
 #frans {
-  background-image: url(4444.jpg);
+  background-image: url(././photos/frans/2664152.jpg);
   background-size: 100%;
 }
 
