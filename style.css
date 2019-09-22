@@ -235,7 +235,11 @@ background-size: contain;
   color:orangered;
   text-decoration: underline;
 }
-
+.error{
+  color:red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:15px;
+}
 /* .cl{
   color:slategrey;
 }
