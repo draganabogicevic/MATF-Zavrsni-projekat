@@ -295,6 +295,7 @@ padding-right: 20%;
 background-image: url(././photos/ambar/426060-PDV0HG-160.jpg);
 background-size: 100%;
 
+text-align: center;
 }
 
 #durmitor {
@@ -315,4 +316,13 @@ background-size: 100%;
 #lorenco {
   background-image: url(OG9KN00.jpg);
   background-size: 100%;
+}
+
+.jumbotron {
+  text-align: center;
+  font-weight: bold;
+}
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
 }
