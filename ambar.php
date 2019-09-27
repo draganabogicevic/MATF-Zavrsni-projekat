@@ -22,7 +22,7 @@
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<span class="navbar-brand h1"
 				style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			<button class="navbar-toggler" type="button" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,16 +33,13 @@
 						<a class="nav-link text-white" href="index.html"> About <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="Druga.html"> Reservation <span
-								class="sr-only">(current)</span></a>
-					</li>
+					
 					<li class="nav-item dropdown">
-						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <span
+						<a class="nav-link text-white dropdown-toggle" href="" data-toggle="dropdown"> Restaurants <span
 								class="sr-only">(current)</span></a>
 							<div class="dropdown-menu bg-dark">
-								<a class="dropdown-item text-white" href="ambar.html">Ambar</a>
-								<a class="dropdown-item text-white" href="durmitor.html">Durmitor</a>
+								<a class="dropdown-item text-white" href="#">Ambar</a>
+								<a class="dropdown-item text-white" href="durmitor.php">Durmitor</a>
 								<a class="dropdown-item text-white" href="dvajelena.html">Dva jelena</a>
 								<a class="dropdown-item text-white" href="frans.html">Frans</a>
 								<a class="dropdown-item text-white" href="lorenco.html">Lorenco i Kakalamba</a>
@@ -53,6 +50,10 @@
 
 							</div>
 						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="Druga.html"> Reservation <span
+								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-white" href="#section2"> Register/Login <span
@@ -129,8 +130,7 @@
 		<div id="info">
 
 <?php
-$font_family = 'My Custom Font';
-$border = '1px solid';
+
 $connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 if (mysqli_connect_errno()) {
 echo 'There is problem with connection: ' . mysqli_connect_error();
