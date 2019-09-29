@@ -37,7 +37,7 @@
 								class="sr-only">(current)</span></a>
 							<div class="dropdown-menu bg-dark">
 								<a class="dropdown-item text-white" href="ambar.php">Ambar</a>
-								<a class="dropdown-item text-white" href="DvaJelena.php">DvaJelena</a>
+								<a class="dropdown-item text-white" href="durmitor.php">Durmitor</a>
 								<a class="dropdown-item text-white" href="#">Dva jelena</a>
 								<a class="dropdown-item text-white" href="frans.php">Frans</a>
 								<a class="dropdown-item text-white" href="lorenco.php">Lorenco i Kakalamba</a>
@@ -125,43 +125,84 @@
 					</div>
 				</div>
 				<a class="carousel-control-prev" href="#photosDvaJelena" data-slide="prev">
-					<span class="carousel-control-prev-icon bg-dark"></span>
+					<span class="carousel-control-prev-icon bg-warning"></span>
 				</a>
 				<a class="carousel-control-next" href="#photosDvaJelena" data-slide="next">
-					<span class="carousel-control-next-icon bg-dark"></span>
+					<span class="carousel-control-next-icon bg-warning"></span>
                 </a>
         </div>
-        <div>
-                <?php
-                $connection=mysqli_connect('localhost', '', '', 'dbzavrsniprojekat');
-                if (mysqli_connect_errno()) {
-                    echo 'There is problem with connection: '. mysqli_connect_errno();
-                } else {
-                    $query = 'SELECT * FROM restorani WHERE Name= "Dva Jelena"';
+	<!--Photos of restaurant for sm devices-->
+    <div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\1512150777-restroran-dva-jelena-nova-godina-(3).jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\1512150778-restroran-dva-jelena-nova-godina-(6).jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\1512150778-restroran-dva-jelena-nova-godina-(7).jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\1512150778-restroran-dva-jelena-nova-godina-(8).jpg"></div>
+		</div>
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\1512150778-restroran-dva-jelena-nova-godina-(9).jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\Biftek-u-sumskom-sosu.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\Bela-vesalica.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\Pastrmka.jpg"></div>
+		</div>
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\Predjelo-za-dvoje.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\dvaJelena\torta-dva-jelena-940x641.jpg"></div>
+		</div>
+		
+		
 
-                    $result = mysqli_query($connection, $query);
-
-                    if($result == false) {
-                        echo '<div class="jumbotron">';
-                        echo 'Error with the query: '.mysqli_error($connection);
-                        echo '</div>';
-                    } else {
-                        $number_of_restorani = mysqli_num_rows($result);
-                        for ($i = 0; $i < $number_of_restorani; $i++) {
-                            $restoran = mysqli_fetch_assoc($result);
-                            echo'<div class="jumbotron text-center text-light font-weight-bold" style="background:transparent !important">';
-                            echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
-                            echo '<p>' . $restoran["About"] . '</p>';
-                            echo '<p>' . $restoran["Address"] . '</p>';
-                            echo '<p>' . $restoran["TelephoneNo"] . '</p>';
-                            echo '<p>' . $restoran["Email"] . '</p>';
-                            echo '<p>' . $restoran["WorkingHours"] . '</p>';
-                            echo '</div>';
-                            }
-                            mysqli_close($connection);
-                        }
-                    
-                }
-                ?>
-
+        <div id="infoRestaurants">
+        <?php
+			
+			$connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
+			if (mysqli_connect_errno()) {
+			echo 'There is problem with connection: ' . mysqli_connect_error();
+			} else {
+			$query = 'SELECT * FROM restorani WHERE Name = "Dva Jelena"';
+							
+			$result = mysqli_query($connection, $query);
+							
+			if ($result == false) {
+			echo '<div class="jumbotron">';
+			echo 'Error with the query: ' . mysqli_error($connection);
+			echo '</div>';
+			} else {
+			$number_of_restorani = mysqli_num_rows($result);
+			for ($i = 0; $i < $number_of_restorani; $i++) {
+			$restoran = mysqli_fetch_assoc($result); 
+			echo '<div class="jumbotron text-center" style="background:transparent !important">';
+			echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
+			echo '<p>' . $restoran["About"] . '</p>';
+			echo '<p>' . $restoran["Address"] . '</p>';
+			echo '<p>' . $restoran["TelephoneNo"] . '</p>';
+			echo '<p>' . $restoran["Email"] . '</p>';
+			echo '<p>' . $restoran["WorkingHours"] . '</p>';
+			echo '</div>';
+			}
+			}
+			mysqli_close($connection);
+            }
+            ?>
+        </div>
         </div>

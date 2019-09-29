@@ -17,7 +17,7 @@
 	<!--NavigationBar---->
 	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
 	<section id="nav-bar">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-warning bg-warning">
 			<span class="navbar-brand h1"
 				style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -31,26 +31,27 @@
 						<a class="nav-link text-white" href="index.html"> About <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="Druga.html"> Reservation <span
-								class="sr-only">(current)</span></a>
-					</li>
+					
 					<li class="nav-item dropdown">
 						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <span
 								class="sr-only">(current)</span></a>
-							<div class="dropdown-menu bg-dark">
-								<a class="dropdown-item text-white" href="ambar.html">Ambar</a>
-								<a class="dropdown-item text-white" href="durmitor.html">Durmitor</a>
-								<a class="dropdown-item text-white" href="dvajelena.html">Dva jelena</a>
-								<a class="dropdown-item text-white" href="frans.html">Frans</a>
-								<a class="dropdown-item text-white" href="lorenco.html">Lorenco i Kakalamba</a>
-								<a class="dropdown-item text-white" href="lovac.html">Lovac</a>
-								<a class="dropdown-item text-white" href="madera.html">Madera</a>
-								<a class="dropdown-item text-white" href="malafabrikaukusa.html">Mala fabrika ukusa</a>
-								<a class="dropdown-item text-white" href="sesirmoj.html">Sesir moj</a>
+							<div class="dropdown-menu bg-warning">
+								<a class="dropdown-item text-white" href="ambar.php">Ambar</a>
+								<a class="dropdown-item text-white" href="durmitor.php">Durmitor</a>
+								<a class="dropdown-item text-white" href="dvajelena.php">Dva jelena</a>
+								<a class="dropdown-item text-white" href="#">Frans</a>
+								<a class="dropdown-item text-white" href="lorenco.php">Lorenco i Kakalamba</a>
+								<a class="dropdown-item text-white" href="lovac.php">Lovac</a>
+								<a class="dropdown-item text-white" href="madera.php">Madera</a>
+								<a class="dropdown-item text-white" href="malafabrikaukusa.php">Mala fabrika ukusa</a>
+								<a class="dropdown-item text-white" href="sesirmoj.php">Sesir moj</a>
 
 							</div>
 						
+                    </li>
+                    <li class="nav-item">
+						<a class="nav-link text-white" href="Druga.html"> Reservation <span
+								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-white" href="#section2"> Register/Login <span
@@ -58,7 +59,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link text-white dropdown-toggle" href="#section3" data-toggle="dropdown"> Language </a>
-						<div class="dropdown-menu bg-dark">
+						<div class="dropdown-menu bg-warning">
 							<a class="dropdown-item text-white" href="#">English</a>
 							<a class="dropdown-item text-white" href="serbian.html">Serbian</a>
 
@@ -141,10 +142,10 @@
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#photosFrans" data-slide="prev">
-				<span class="carousel-control-prev-icon bg-dark"></span>
+				<span class="carousel-control-prev-icon bg-warning"></span>
 			</a>
 			<a class="carousel-control-next" href="#photosFrans" data-slide="next">
-				<span class="carousel-control-next-icon bg-dark"></span>
+				<span class="carousel-control-next-icon bg-warning"></span>
 			</a>
 		</div>
 <!--Photos of restaurant for sm devices-->
@@ -203,4 +204,39 @@
 		
 		<div class="row d-sm-none">
 			<div class="col-12"><img class="img img-fluid" src=".\photos\frans\ko_25.jpg"></div>
-		</div>
+        </div>
+        
+        <div id="infoRestaurants">
+                <?php
+                $connection=mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
+                if (mysqli_connect_errno()) {
+                    echo 'There is problem with connection: '. mysqli_connect_errno();
+                } else {
+                    $query = 'SELECT * FROM restorani WHERE Name= "Frans"';
+
+                    $result = mysqli_query($connection, $query);
+
+                    if($result == false) {
+                        echo '<div class="jumbotron">';
+                        echo 'Error with the query: '.mysqli_error($connection);
+                        echo '</div>';
+                    } else {
+                        $number_of_restorani = mysqli_num_rows($result);
+                        for ($i = 0; $i < $number_of_restorani; $i++) {
+                            $restoran = mysqli_fetch_assoc($result);
+                            echo'<div class="jumbotron text-center" style="background:transparent !important">';
+                            echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
+                            echo '<p>' . $restoran["About"] . '</p>';
+                            echo '<p>' . $restoran["Address"] . '</p>';
+                            echo '<p>' . $restoran["TelephoneNo"] . '</p>';
+                            echo '<p>' . $restoran["Email"] . '</p>';
+                            echo '<p>' . $restoran["WorkingHours"] . '</p>';
+                            echo '</div>';
+                            }
+                            mysqli_close($connection);
+                        }
+                    
+                }
+                ?>
+
+        </div>
