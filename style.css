@@ -25,11 +25,6 @@ body
 {
   color:rgb(255, 165, 0) !important;
 }
-.dropdown-item:hover 
-{
-  color:rgb(255, 165, 0) !important;
-  background: none;
-}
 @keyframes myanimation {
 0% {
     left: 0%;
@@ -93,17 +88,20 @@ body
 #img1{
   animation-delay: 10s;
 } 
-/* #section3
+#sectionProfil1
 {
   font-family: "My Custom Font2";
   font-size:20px;
   padding:40px;
+  background-image: url(././photos/profil/foodPattern.jpg);
+  min-height: 650px;
+  width: 100%;
 }
-input{
+/* input{
   outline: 1px solid crimson;
   background-color: rgba(100,100,100,0.3);
   color:crimson;
-} */
+}  */
 
  @font-face {
   font-family: "My Custom Font";
@@ -114,12 +112,12 @@ input{
   font-family: "My Custom Font3";
   src: url("Bradley-Regular.ttf");
 }
-/*
+
 @font-face {
   font-family: "My Custom Font2";
   src: url("BRADHI.ttf");
 }
-
+/*
 #d1, #d2 {
 	font-family:"My Custom Font2";
 	font-weight: bold;
@@ -297,35 +295,30 @@ padding-right: 20%;
 } 
 
 #ambar {
-background-image: url(././photos/ambar/3465jpg);
+background-image: url(././photos/ambar/426060-PDV0HG-160.jpg);
 background-size: 100%;
 
 text-align: center;
 }
 
 #durmitor {
-  background-image: url(././photos/durmitor/676416-PPSOH9-742.jpg);
+  background-image: url(././photos/durmitor/2391818.jpg);
   background-size: 100%;
 }
 
 #dvajelena {
-  background-image: url(././photos/dvaJelena/267973-P55Y9G-21.jpg);
+  background-image: url(././photos/dvaJelena/2768500.jpg);
   background-size: 100%;
 }
 
 #frans {
-  background-image: url(././photos/frans/642211-POM9B9-841.jpg);
+  background-image: url(././photos/frans/2664152.jpg);
   background-size: 100%;
 }
 
 #lorenco {
   background-image: url(OG9KN00.jpg);
   background-size: 100%;
-}
-
-#infoRestaurants {
-  font-family: "My Custom Font";
-  color: orange;
 }
 
 
