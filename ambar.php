@@ -128,15 +128,15 @@
 		
 		</div>
 
-		<div id="info">
+		<div id="infoRestaurants">
 
 <?php
 
-$connection = mysqli_connect('localhost', 'milica', 'm', 'dbzavrsniprojekat');
+$connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 if (mysqli_connect_errno()) {
 echo 'There is problem with connection: ' . mysqli_connect_error();
 } else {
-$query = "SELECT * FROM restorani WHERE Name = 'Ambar'";
+$query = "SELECT * FROM restorani WHERE Name = 'Ambar.'";
 				
 $result = mysqli_query($connection, $query);
 				
@@ -145,10 +145,8 @@ echo "<div class='jumbotron'>";
 echo "Error with the query: " . mysqli_error($connection);
 echo "</div>";
 } else {
-// $number_of_restorani = mysqli_num_rows($result);
-// for ($i = 0; $i < $number_of_restorani; $i++) {
 $restoran = mysqli_fetch_assoc($result); 
-echo "<div class='jumbotron text-center font-weight-bold' style='background:transparent !important'>";
+echo "<div class='jumbotron text-center' style='background:transparent !important'>";
 echo "<h3 class='display-3'>" . $restoran['Name'] . " </h3>";
 echo "<p> " . $restoran['About'] . "</p>";
 echo "<p>" . $restoran['Address'] . " </p>";
@@ -156,10 +154,25 @@ echo "<p>" . $restoran['TelephoneNo'] . " </p>";
 echo "<p>" . $restoran['Email'] . " </p>";
 echo "<p>" . $restoran['WorkingHours'] . " </p>";
 echo "</div>";
-// }
 }
 mysqli_close($connection);
 }?>
+
+</div>
+<div id="map">
+	<script>
+	function myMap() {
+		var mapProp= {
+  		center:new google.maps.LatLng(44.819972,20.448056),
+  		zoom:15,
+		};
+		var map = new google.maps.Map(document.getElementById("map"),mapProp);
+		var marker = new google.maps.Marker({position: uluru, map: map});
+	}
+		
+		
+	</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkvVBxzRQKXxp7JlJH7PuadMEtTcDBu6I&callback=myMap"></script>
 
 </div>
 

@@ -57,14 +57,8 @@
 						<a class="nav-link text-white" href="#section2"> Register/Login <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link text-white dropdown-toggle" href="#section3" data-toggle="dropdown"> Language </a>
-						<div class="dropdown-menu bg-dark">
-							<a class="dropdown-item text-white" href="#">English</a>
-							<a class="dropdown-item text-white" href="serbian.html">Serbian</a>
-
-						</div>
-					
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">EN/SR</a>
 					</li>
 				
 				</ul>
@@ -125,10 +119,10 @@
 					</div>
 				</div>
 				<a class="carousel-control-prev" href="#photosDvaJelena" data-slide="prev">
-					<span class="carousel-control-prev-icon bg-warning"></span>
+					<span class="carousel-control-prev-icon bg-dark"></span>
 				</a>
 				<a class="carousel-control-next" href="#photosDvaJelena" data-slide="next">
-					<span class="carousel-control-next-icon bg-warning"></span>
+					<span class="carousel-control-next-icon bg-dark"></span>
                 </a>
         </div>
 	<!--Photos of restaurant for sm devices-->
@@ -205,4 +199,29 @@
             }
             ?>
         </div>
-        </div>
+		<div id="socialnetlinks">
+			<a href="https://www.facebook.com/dvajelena/" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+			<a href="https://www.instagram.com/dvajelena/?hl=hr" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+			<a href="https://www.tripadvisor.com/Restaurant_Review-g294472-d1791901-Reviews-Dva_Jelena_The_Two_Deer_Restaurant-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+		</div>
+	
+
+		<div class="row">
+			<div id="map" class="col-8 offset-2 mt-0 mb-5">
+			<script>
+			function myMap() {
+			var dvaJelena= {lat:44.817775, lng:20.464175};
+			var map = new google.maps.Map(document.getElementById("map"),{zoom: 15, center: dvaJelena});
+			var marker = new google.maps.Marker({position: dvaJelena, map: map});
+		}
+		
+		
+		</script>
+   		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
+ </div>
+
+
+
+
+</body>
+</html>

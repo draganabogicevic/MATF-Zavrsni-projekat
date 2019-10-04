@@ -242,7 +242,32 @@
 			}?>
 			
 			</div>
-			
-			</div>
+		<div id="socialnetlinks">
+			<a href="https://www.facebook.com/AmbarBelgrade/?ref=hl" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+			<a href="https://www.instagram.com/ambar_belgrade/" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+			<a href="https://www.tripadvisor.rs/Restaurant_Review-g294472-d8178411-Reviews-Ambar-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+		</div>
+	
+
+		<div class="row">
+			<div id="map" class="col-8 offset-2 mt-0 mb-5">
+			<script>
+			function myMap() {
+			var durmitor= {lat:44.932481, lng:20.396172};
+			var map = new google.maps.Map(document.getElementById("map"),{zoom: 15, center: durmitor});
+			var marker = new google.maps.Marker({position: durmitor, map: map});
+		}
+		
+		
+		</script>
+   		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
+ </div>
+
+
+
+
+</body>
+</html>
+
 					
 		

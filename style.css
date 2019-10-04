@@ -322,3 +322,7 @@ text-align: center;
 }
 
 
+#infoRestaurants {
+  font-family: "My Custom Font";
+  color: orange;
+}

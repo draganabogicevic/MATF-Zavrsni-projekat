@@ -18,55 +18,241 @@
 	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
 	<section id="nav-bar">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<span class="navbar-brand h1"
-				style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			<p class="navbar-brand h1"
+				style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</p>
+			<button class="navbar-toggler" type="button" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+				<p class="navbar-toggler-icon"></p>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link text-white" href="index.html"> About <span
-								class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="Druga.html"> Reservation <span
-								class="sr-only">(current)</span></a>
+						<a class="nav-link text-white" href="index.html"> About <p
+								class="sr-only">(current)</p></a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <span
-								class="sr-only">(current)</span></a>
+						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <p
+								class="sr-only">(current)</p></a>
 							<div class="dropdown-menu bg-dark">
-								<a class="dropdown-item text-white" href="ambar.html">Ambar</a>
-								<a class="dropdown-item text-white" href="durmitor.html">Durmitor</a>
-								<a class="dropdown-item text-white" href="dvajelena.html">Dva jelena</a>
-								<a class="dropdown-item text-white" href="frans.html">Frans</a>
-								<a class="dropdown-item text-white" href="lorenco.html">Lorenco i Kakalamba</a>
-								<a class="dropdown-item text-white" href="lovac.html">Lovac</a>
-								<a class="dropdown-item text-white" href="madera.html">Madera</a>
-								<a class="dropdown-item text-white" href="malafabrikaukusa.html">Mala fabrika ukusa</a>
-								<a class="dropdown-item text-white" href="sesirmoj.html">Sesir moj</a>
+								<a class="dropdown-item text-white" href="ambar.php">Ambar</a>
+								<a class="dropdown-item text-white" href="durmitor.php">Durmitor</a>
+								<a class="dropdown-item text-white" href="dvajelena.php">Dva jelena</a>
+								<a class="dropdown-item text-white" href="frans.php">Frans</a>
+								<a class="dropdown-item text-white" href="#">Lorenco i Kakalamba</a>
+								<a class="dropdown-item text-white" href="lovac.php" >Lovac</a>
+								<a class="dropdown-item text-white" href="madera.php">Madera</a>
+								<a class="dropdown-item text-white" href="malafabrikaukusa.php">Mala fabrika ukusa</a>
+								<a class="dropdown-item text-white" href="sesirmoj.php">Sesir moj</a>
 
 							</div>
 						
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-white" href="#section2"> Register/Login <span
-								class="sr-only">(current)</span></a>
+						<a class="nav-link text-white" href="Druga.html"> Reservation <p
+								class="sr-only">(current)</p></a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link text-white dropdown-toggle" href="#section3" data-toggle="dropdown"> Language </a>
-						<div class="dropdown-menu bg-dark">
-							<a class="dropdown-item text-white" href="#">English</a>
-							<a class="dropdown-item text-white" href="serbian.html">Serbian</a>
-
-						</div>
-					
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#section2"> Register/Login <p
+								class="sr-only">(current)</p></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">EN/SR</a>
 					</li>
 					
 
 				</ul>
 			</div>
 		</nav>
+</section>
+		<div class="container">
+			<div id="photosLorenco" class="carousel slide d-none d-sm-block text-center" data-ride="carousel">
+				<ul class="carousel-indicators">
+					<li data-target="#photosLorenco" data-slide-to="0" class="active"></li>
+					<li data-target="#photosLorenco" data-slide-to="1"></li>
+					<li data-target="#photosLorenco" data-slide-to="2"></li>
+					<li data-target="#photosLorenco" data-slide-to="3"></li>
+					<li data-target="#photosLorenco" data-slide-to="4"></li>
+					<li data-target="#photosLorenco" data-slide-to="5"></li>
+					<li data-target="#photosLorenco" data-slide-to="6"></li>
+					<li data-target="#photosLorenco" data-slide-to="7"></li>
+					<li data-target="#photosLorenco" data-slide-to="8"></li>
+					<li data-target="#photosLorenco" data-slide-to="9"></li>
+					<li data-target="#photosLorenco" data-slide-to="10"></li>
+					<li data-target="#photosLorenco" data-slide-to="11"></li>
+					
+					
+				</ul>
+				<div class="carousel-inner">
+					
+					<div class="carousel-item active">
+						<img class="img-thumbnail" src=".\photos\Lorenco\8-enterijer.jpg">
+					</div>
+					
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\19-enterijer.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\24-enterijer.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\IMG_0101_resize.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\IMG_1780_resize.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\IMG_1808_resize.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\IMG_4167_resize.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\IMG_6894_resize.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\Losos-na-miksu-zelenih-salata.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\Mandarina-1.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\Piletina-Toskana-1.jpg">
+					</div>
+					<div class="carousel-item">
+						<img class="img-thumbnail" src=".\photos\Lorenco\Potaz-pola-pola-1.jpg">
+					</div>
+					
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#photosLorenco" data-slide="prev">
+				<p class="carousel-control-prev-icon bg-dark"></p>
+			</a>
+			<a class="carousel-control-next" href="#photosLorenco" data-slide="next">
+				<p class="carousel-control-next-icon bg-dark"></p>
+			</a>
+
+		</div>
+		<!--Photos of restaurant for sm devices-->
+		
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\8-enterijer.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+            <div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\24-enterijer.jpg">
+		    </div>
+        </div>
+        
+		<div class="row d-sm-none">
+            <div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\IMG_0101_resize.jpg">
+            </div>
+        </div>
+        
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\IMG_1780_resize.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\IMG_1808_resize.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\IMG_4167_resize.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\IMG_6894_resize.jpg">
+            </div>
+        </div>
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\Losos-na-miksu-zelenih-salata.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\Mandarina-1.jpg">
+            </div>
+        </div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\Piletina-Toskana-1.jpg">
+            </div>
+        </div>
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\Lorenco\Potaz-pola-pola-1.jpg">
+        </div>
+        </div>
+    
+		<div id="infoRestaurants">
+
+        <?php
+                $connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
+                if (mysqli_connect_errno()) {
+                    echo 'There is problem with connection: '. mysqli_connect_errno();
+                } else {
+                    $query = 'SELECT * FROM restorani WHERE Name = "Lorenco i Kakalamba"';
+
+                    $result = mysqli_query($connection, $query);
+
+                    if($result == false) {
+                        echo '<div class="jumbotron">';
+                        echo 'Error with the query: '.mysqli_error($connection);
+                        echo '</div>';
+                    } else {
+                        $number_of_restorani = mysqli_num_rows($result);
+                        for ($i = 0; $i < $number_of_restorani; $i++) {
+                            $restoran = mysqli_fetch_assoc($result);
+                            echo'<div class="jumbotron text-center" style="background:transparent !important">';
+                            echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
+                            echo '<p>' . $restoran["About"] . '</p>';
+                            echo '<p>' . $restoran["Address"] . '</p>';
+                            echo '<p>' . $restoran["TelephoneNo"] . '</p>';
+                            echo '<p>' . $restoran["Email"] . '</p>';
+                            echo '<p>' . $restoran["WorkingHours"] . '</p>';
+                            echo '</div>';
+                            }
+                            mysqli_close($connection);
+                        }
+                    
+                }
+                ?>
+			
+			</div>
+			<div id="socialnetlinks">
+			<a href="https://www.facebook.com/lorenzokakalamba/" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+			<a href="https://www.instagram.com/explore/locations/1019226625/lorenzo-kakalamba/?hl=hr" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+			<a href="https://www.tripadvisor.com/Restaurant_Review-g294472-d2287452-Reviews-Lorenzo_Kakalamba-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+		</div>
+	
+
+		<div class="row">
+			<div id="map" class="col-8 offset-2 mt-0 mb-5">
+			<script>
+			function myMap() {
+			var lorenco= {lat:44.809740, lng:20.480371};
+			var map = new google.maps.Map(document.getElementById("map"),{zoom: 15, center: lorenco});
+			var marker = new google.maps.Marker({position: lorenco, map: map});
+		}
+		
+		
+		</script>
+   		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
+ </div>
+
+
+
+
+</body>
+</html>
+			
+			
+					
+					
+
+		
