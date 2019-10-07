@@ -88,15 +88,7 @@ body
 #img1{
   animation-delay: 10s;
 } 
-#sectionProfil1
-{
-  font-family: "My Custom Font2";
-  font-size:20px;
-  padding:40px;
-  background-image: url(././photos/profil/foodPattern.jpg);
-  min-height: 650px;
-  width: 100%;
-}
+
 /* input{
   outline: 1px solid crimson;
   background-color: rgba(100,100,100,0.3);
@@ -115,7 +107,17 @@ body
 
 @font-face {
   font-family: "My Custom Font2";
-  src: url("BRADHI.ttf");
+  src: url("DaddyRewind.ttf");
+}
+#sectionProfil1
+{
+  font-family: "My Custom Font2";
+  color: black;
+  font-size:20px;
+  padding:40px;
+  background-image: url(././photos/profil/foodPattern.jpg);
+  min-height: 650px;
+  width: 100%;
 }
 /*
 #d1, #d2 {
@@ -144,32 +146,7 @@ body
   padding-bottom: 12%;
 }
 
-.project{
-  height:200px;
-  width:200px;
-  border:2px solid orange;
-  border-radius: 12px;
-}
-#project1{
-background-image:url("pic1.jpeg");
-background-size: contain;
 
-
-}
-#project2{
-background-image:url("pic2.jpeg");
-background-size: contain;
-} */
-/* #project3{
-background-image:url("pic3.jpeg");
-background-size: contain;
-}
-.contentD 
-{
-  
-  width: 100%;
-  text-align: center; 
-}
 
 .button 
 {
