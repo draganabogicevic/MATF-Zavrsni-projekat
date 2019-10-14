@@ -76,7 +76,7 @@
  $password = hash('sha256', $_POST['pwd']);
  $email = $_POST['mail'];
 
-$con = mysqli_connect('localhost', 'milica', 'm', 'dbzavrsniprojekat');
+$con = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 
 if (mysqli_connect_errno()){
     echo "<p style='text-align:center'> Greska u konekciji sa bazom ".mysqli_connect_error()."</p>";

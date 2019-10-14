@@ -3,6 +3,7 @@ body
   background-color: lemonchiffon !important;
   width:100%;
   height:100%;
+ 
 }
 .nav-bar
 {
@@ -24,6 +25,11 @@ body
 .nav-link:hover
 {
   color:rgb(255, 165, 0) !important;
+}
+
+.dropdown-item:hover {
+background: none;
+color:rgb(255, 165, 0) !important;
 }
 @keyframes myanimation {
 0% {
@@ -230,6 +236,8 @@ background-size: contain;
 }
 .wrapper{
   padding:2%;
+  font-family: "My Custom Font";
+
 }
 .form-control{
   outline: 1px solid rgb(247, 147, 34);
@@ -295,34 +303,91 @@ padding-right: 20%;
 } 
 
 #ambar {
-background-image: url(././photos/ambar/426060-PDV0HG-160.jpg);
-background-size: 100%;
-
+background-image: url(././photos/ambar/2478036.jpg);
+background-size: 110%;
 text-align: center;
 }
 
 #durmitor {
-  background-image: url(././photos/durmitor/2391818.jpg);
-  background-size: 100%;
+  background-image: url(././photos/durmitor/676416-PPSOH9-742.jpg);
+  background-size: 102%;
+  text-align: center;
 }
 
 #dvajelena {
-  background-image: url(././photos/dvaJelena/2768500.jpg);
+  background-image: url(././photos/dvaJelena/267973-P55Y9G-21.jpg);
   background-size: 100%;
+  text-align: center;
 }
 
 #frans {
-  background-image: url(././photos/frans/2664152.jpg);
+  background-image: url(././photos/frans/182091-OWONUF-759.jpg);
   background-size: 100%;
+  text-align: center;
 }
 
 #lorenco {
-  background-image: url(OG9KN00.jpg);
+  background-image: url(././photos/Lorenco/549559-PJZUF5-102.jpg);
   background-size: 100%;
+  text-align: center;
 }
+
+#lovac {
+    background-image: url(././photos/Lovac/182115-OWONVK-687.jpg);
+    background-size: 100%;
+    text-align: center;
+  }
+#madera {
+    background-image: url(././photos/madera/642230-POM9DO-545.jpg);
+    background-size: 100%;
+    text-align: center;
+  }
+
 
 
 #infoRestaurants {
   font-family: "My Custom Font";
-  color: orange;
+}
+
+#map {
+    width: 60%;
+    height: 500px;
+    background-color: grey;
+    border: 5px white solid;
+}
+
+.icons {
+    height: 30px;
+    width: 30px;
+}
+#socialnetlinks {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#phoneNo {
+    text-decoration: none;
+}
+
+.jumbotron {
+    width: 80%;
+    margin: auto;
+}
+
+.fb-comments {
+    background-color: white;
+}
+
+#druga {
+  background-image: url(././photos/backgroundImg/559837-PKR0G9-211.jpg);
+  background-size: 100%;
+  
+}
+
+#reservation {
+  border: rgb(247, 147, 34) solid 2px;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
 }
