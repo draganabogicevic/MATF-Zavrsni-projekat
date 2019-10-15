@@ -1,3 +1,9 @@
+<?php
+
+include 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -72,10 +78,10 @@
 		<div class="jumbo">
 <?php
  $name = $_POST['name'];
- $username = $_POST['username'];
  $password = hash('sha256', $_POST['pwd']);
  $email = $_POST['mail'];
 
+<<<<<<< HEAD
 $con = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 
 if (mysqli_connect_errno()){
@@ -83,53 +89,58 @@ if (mysqli_connect_errno()){
 }
 else{
    
+=======
+>>>>>>> cfb08e6371d6187a5c8094191ea8cf0802248a76
 
-    $query1 = "SELECT * from korisnici WHERE Username='$username'";
-    $result1 = mysqli_query($con, $query1);
-
-    if(mysqli_num_rows($result1)>0){
-        echo "<p style='text-align:center'> Korisnik sa vasim korisnickim imenom vec postoji u bazi. </p>";   
-        echo "<p style='text-align:center'><a  href='index.html'> Go back to Login </a></p>";
-      
-
-    }
-    else{
-    $query = "INSERT INTO korisnici (Username, FirstLastName, Email, Password) VALUES
-    ('$username', '$name', '$email', '$password')";
-
-    $result = mysqli_query($con, $query);
-
-    if ($result == false) {
-       
-        echo "<div class='alert alert-dismissible alert-danger'>";
-        echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
-
-        echo "<strong>Error with the query: </strong> " . mysqli_error($con);
-        echo "<br>";
-        echo "<strong>Please try later! </strong>";
-        echo "</div>";
-
-    } else {
-        
-        echo "<div class='row'>";
-        echo "<div class='h3 border border-danger rounded bg-white offset-md-1 col-md-7 col-12'>";
-        echo "<p> Ime i prezime: ".$name." </p>";
-        echo "<p> Korisnicko ime: ".$username." </p>";
-        echo "<p> Email adresa: ".$email." </p>";
-        echo "<a class='btn btn-primary' href='Druga.html'>Go to reservation page </a>";
-        echo '</div>';
-        echo "</div>";
-
-    }
-
-}
-}
-
-
-?>
-
+	$query1 = "SELECT * from korisnici WHERE Username=?";
+	if ($stmt = $con->prepare($query1))
+	{
+		$username = $_POST['username'];
+		$stmt->bind_param ('s', $username);
+	if($stmt->execute())
 	
+    $result1 = $stmt->bind_result($col1,$col2,$col3,$col4,$col5);
 
+	if($stmt->fetch())
+	{
+        echo "<p style='text-align:center'>User with your usernam already exists in our database. </p>";   
+        echo "<p style='text-align:center'><a  href='index.html'> Go back to Login </a></p>";  
+    }
+	else
+	{
+		$stmt->free_result();
+		$stmt->close();
+		
+        
+    $query = "INSERT INTO korisnici (Username, FirstLastName, Email, Password) VALUES
+	(?,?,?,?)";
+	
+	if ($stmt = $con->prepare($query))
+	{
+		$stmt->bind_param ('ssss', $username,$name,$email,$password);
+		$stmt->execute();
+
+        if($stmt->execute()){
+			// Records created successfully. Display them and redirect link to Login page
+			echo "<p style='text-align:center> You created your account. Please go to home page and login </p>";
+			echo "<div class='row'>";
+			echo "<div class='h3 border border-danger rounded bg-white offset-md-1 col-md-7 col-12'>";
+			echo "<p> Ime i prezime: ".$name." </p>";
+			echo "<p> Korisnicko ime: ".$username." </p>";
+			echo "<p> Email adresa: ".$email." </p>";
+			echo "<p style='text-align:center'><a  href='index.html #section2'> Go to Login </a></p>"; 
+			echo '</div>';
+			echo "</div>";
+			
+		} else{
+			echo "Something went wrong. Please try again later.";
+		}
+	}
+	
+	}
+
+    }
+?>
 		</div>
 
     </section>

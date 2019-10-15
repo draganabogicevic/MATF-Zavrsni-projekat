@@ -42,7 +42,6 @@ $(document).ready(function(){
         else {
         // $('#signUp').removeAttr('disabled');
         $(".error").attr('hidden','hidden');
-        $("input").val("");
         alert("Form Submitted Successfuly!");
         return true;
         }
