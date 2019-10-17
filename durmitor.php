@@ -2,21 +2,75 @@
 <html>
 
 <head>
-	<?php
-	include_once 'metatags.php';
-	?>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 	<title> BelgradeRestos </title>
 </head>
 
 <body id="durmitor">
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2188085814821958&autoLogAppEvents=1"></script>
-	<?php 
-		include 'components/navbar.php';
-	?>
-	<?php
-	include_once 'navbar.php';
-	?>
+	<!--NavigationBar---->
+	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<p class="navbar-brand h1"
+				style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</p>
+			<button class="navbar-toggler" type="button" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<p class="navbar-toggler-icon"></p>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link text-white" href="index.html"> About <p
+								class="sr-only">(current)</p></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link text-white dropdown-toggle" href="#" data-toggle="dropdown"> Restaurants <p
+								class="sr-only">(current)</p></a>
+							<div class="dropdown-menu bg-dark">
+								<a class="dropdown-item text-white" href="ambar.php">Ambar</a>
+								<a class="dropdown-item text-white" href="#">Durmitor</a>
+								<a class="dropdown-item text-white" href="dvajelena.php">Dva jelena</a>
+								<a class="dropdown-item text-white" href="frans.php">Frans</a>
+								<a class="dropdown-item text-white" href="lorenco.php">Lorenco i Kakalamba</a>
+								<a class="dropdown-item text-white" href="lovac.php" >Lovac</a>
+								<a class="dropdown-item text-white" href="madera.php">Madera</a>
+								<a class="dropdown-item text-white" href="malafabrikaukusa.php">Mala fabrika ukusa</a>
+								<a class="dropdown-item text-white" href="sesirmoj.php">Sesir moj</a>
+
+							</div>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="Druga.html"> Reservation <p
+								class="sr-only">(current)</p></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#section2"> Register/Login <p
+								class="sr-only">(current)</p></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link text-white dropdown-toggle" href="#section3" data-toggle="dropdown"> Language </a>
+						<div class="dropdown-menu bg-dark">
+							<a class="dropdown-item text-white" href="#">English</a>
+							<a class="dropdown-item text-white" href="serbian.html">Serbian</a>
+
+						</div>
+					
+					</li>
+					
+
+				</ul>
+			</div>
+		</nav>
+</section>
 		<div class="container">
 			<div id="photosDurmitor" class="carousel slide d-none d-sm-block text-center" data-ride="carousel">
 				<ul class="carousel-indicators">
@@ -208,8 +262,7 @@
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
  </div>
-	</div>
- <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5"></div>
+
 
 
 
