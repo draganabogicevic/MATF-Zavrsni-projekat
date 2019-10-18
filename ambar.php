@@ -15,10 +15,6 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2188085814821958&autoLogAppEvents=1"></script>
 
-
-	<?php 
-		include 'components/navbar.php';
-	?>
 	<?php
 	include_once 'navbar.php';
 	?>

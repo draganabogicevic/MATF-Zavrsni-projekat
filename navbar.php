@@ -1,3 +1,4 @@
+
 <section id="nav-bar">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<span class="navbar-brand h1" style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
@@ -25,16 +26,25 @@
 							</div>
 								
 							</li>
+							</li>
+			        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
 					<li class="nav-item active">
 						<a class="nav-link text-white" href="reservation.php"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
+					<?php endif; ?>
+					<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
 					<li class="nav-item active">
-						<a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+						<a class="nav-link text-white" href="Logout.php"> Logout <span
 								class="sr-only">(current)</span></a>
 					</li>
+					<?php else: ?>
+					<li class="nav-item active">
+								 <a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+									class="sr-only">(current)</span></a>
+									</li>
+                        <?php endif; ?>
 					
-
 				</ul>
 			</div>
 		</nav>

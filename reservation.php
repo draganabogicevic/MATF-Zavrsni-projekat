@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,9 +13,6 @@
 
 <body id="reservation">
 
-	<?php 
-		include 'components/navbar.php';
-	?>
 	<?php
 	include_once 'navbar.php';
 	?>
