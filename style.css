@@ -3,7 +3,6 @@ body
   background-color: lemonchiffon !important;
   width:100%;
   height:100%;
- 
 }
 .nav-bar
 {
@@ -25,11 +24,6 @@ body
 .nav-link:hover
 {
   color:rgb(255, 165, 0) !important;
-}
-
-.dropdown-item:hover {
-background: none;
-color:rgb(255, 165, 0) !important;
 }
 @keyframes myanimation {
 0% {
@@ -95,12 +89,6 @@ color:rgb(255, 165, 0) !important;
   animation-delay: 10s;
 } 
 
-/* input{
-  outline: 1px solid crimson;
-  background-color: rgba(100,100,100,0.3);
-  color:crimson;
-}  */
-
  @font-face {
   font-family: "My Custom Font";
   src: url("Lobster.otf");
@@ -115,75 +103,17 @@ color:rgb(255, 165, 0) !important;
   font-family: "My Custom Font2";
   src: url("DaddyRewind.ttf");
 }
-#sectionProfil1
+.sectionProfil1
 {
-  font-family: "My Custom Font2";
+  font-family: "My Custom Font";
   color: black;
   font-size:20px;
   padding:40px;
-  background-image: url(././photos/profil/foodPattern.jpg);
+  background-color: rgb(61, 190, 61);
   min-height: 650px;
   width: 100%;
 }
-/*
-#d1, #d2 {
-	font-family:"My Custom Font2";
-	font-weight: bold;
-	font-size:20px;
-  color:black;
-  border:1px solid black;
-  border-radius:20px; 
-  background-color:lemonchiffon; 
-  padding: 25px;
-  margin-top: 15px;
-} */
-/* #d2{
- font-size:20px;
- text-align: center;
- height: 40%;
-}
-.projects
-{
-  text-align:center;
-  font-family: "My Custom Font";
-  color:brown;
-  font-size: 20px;
-  padding-top:6%;
-  padding-bottom: 12%;
-}
 
-
-
-.button 
-{
-  margin:auto;
-  padding: 6px 10px;
-  background-color: orange;
-  color: black;
-  font-family:"My Custom Font";
-  font-weight: bold;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size:17px;
-  text-align: center;
-  text-transform: uppercase;
-
-} */
-/* a.button:hover
-{
-  color: brown;
-}
-#linx
-{
-  color:crimson;
-  font-weight: bold;
-  
-}
-#linx:hover
-{
-  color:brown;
-} */
  #section2{
   font-family: "My Custom Font";
   color:white;
@@ -213,8 +143,6 @@ color:rgb(255, 165, 0) !important;
 }
 .wrapper{
   padding:2%;
-  font-family: "My Custom Font";
-
 }
 .form-control{
   outline: 1px solid rgb(247, 147, 34);
@@ -228,15 +156,7 @@ color:rgb(255, 165, 0) !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size:15px;
 }
-/* .cl{
-  color:slategrey;
-}
-.cl:hover{
-color: crimson;
-}
-.j1{
-background-image: url("sakura.png") !important;
-} */
+
 #subheading1 {
   color:white;
   margin-bottom: 25px;
@@ -258,9 +178,10 @@ background-image: url("sakura.png") !important;
 }
 .animPhotos {
   position:relative;
-  padding-top:1%;
+  padding-top:2%;
   margin:0%;
   left:0%;
+  padding-bottom:2%;
 }
 #section1 {
   margin:0%;
@@ -277,7 +198,11 @@ background-image: url("sakura.png") !important;
 padding-top: 2%;
 padding-left:20%;
 padding-right: 20%;
+padding-bottom:2%;
 } 
+#about{
+  padding: 2%;
+}
 
 #ambar {
 background-image: url(././photos/ambar/2478036.jpg);
@@ -308,53 +233,51 @@ text-align: center;
   background-size: 100%;
   text-align: center;
 }
-
 #lovac {
-    background-image: url(././photos/Lovac/182115-OWONVK-687.jpg);
-    background-size: 100%;
-    text-align: center;
-  }
+  background-image: url(././photos/Lovac/182115-OWONVK-687.jpg);
+  background-size: 100%;
+  text-align: center;
+}
 #madera {
-    background-image: url(././photos/madera/642230-POM9DO-545.jpg);
-    background-size: 100%;
-    text-align: center;
-  }
-
-
+  background-image: url(././photos/madera/642230-POM9DO-545.jpg);
+  background-size: 100%;
+  text-align: center;
+}
 
 #infoRestaurants {
   font-family: "My Custom Font";
+  color: orange;
 }
-
 #map {
-    width: 60%;
-    height: 500px;
-    background-color: grey;
-    border: 5px white solid;
+  width: 60%;
+  height: 500px;
+  background-color: grey;
+  border: 5px white solid;
 }
 
 .icons {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
 #socialnetlinks {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #phoneNo {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .jumbotron {
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
 .fb-comments {
-    background-color: white;
+  background-color: white;
 }
 
+<<<<<<< HEAD
 #reservation {
   background-repeat: no-repeat;
   background-image: url(././photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
@@ -376,3 +299,18 @@ text-align: center;
   margin-top: 30px;
 }
 
+=======
+#druga {
+background-image: url(././photos/backgroundImg/559837-PKR0G9-211.jpg);
+background-size: 100%;
+
+}
+
+#reservation {
+border: rgb(247, 147, 34) solid 2px;
+border-radius: 10px;
+width: 60%;
+margin: auto;
+margin-top: 30px;
+}
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575

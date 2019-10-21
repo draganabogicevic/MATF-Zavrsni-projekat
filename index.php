@@ -1,14 +1,18 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<?php
+<?php
 	include_once 'metatags.php';
-	?>
-	<title> BelgradeRestos </title>
+?>
+<title> BelgradeRestos </title>
 </head>
 
 <body>
+<<<<<<< HEAD
 	
 	
 	<?php
@@ -16,6 +20,11 @@
 	?>
 
 
+=======
+<?php 
+		include_once 'navbar.php';
+?>
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 	<!--jumbotron section -->
 	<section id="section1" class="jumbotron jumbotron-fluid">
@@ -107,26 +116,26 @@
 
 <div id = "log" class="wrapper"> 
 			<h2 style="text-align:center; font-family: 'My Custom Font';">Login</h2>
-			<form id = "formLogin" action="" method="">
+			<form id = "formLogin" action="login.php" method="POST">
 
 				<div class="form-group contact h5">
 					<div>
 						<label> Username: </label>
-						<input class="form-control" type="text" name="username2" placeholder="">
-						<p id='p1Form' class='error'></p>
+						<input id="username2" class="form-control" type="text" name="username2" placeholder="">
+						<p id='errorUsername2' class='error' hidden>You must enter your username</p>
 					</div>
 				</div>
 
 				<div class="form-group contact h5">
 					<div>
 						<label> Password: </label>
-						<input class="form-control" type="password" name="pwd2" placeholder="">
-						<p id='p2Form' class='error'></p>
+						<input id="pwd2" class="form-control" type="password" name="pwd2" placeholder="">
+						<p id='errorPass2' class='error' hidden>You must enter your password</p>
 					</div>
 				</div>
 					
 					<div class="form-group btnDiv h5">		
-						<input class="btn btn-success" name="logg" type="submit" value="Sign in">
+						<input id="signIn" class="btn btn-success" name="logg" type="submit" value="Sign in">
 					</div>
 
 			</form>
@@ -140,5 +149,6 @@
 </body>
 <script src="jsCode1.js"></script>
 <script src="formValidation.js"></script>
+<script src="formValidation2.js"></script>
 
 </html>

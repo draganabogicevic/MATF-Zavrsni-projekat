@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +14,7 @@
 </head>
 
 
+<<<<<<< HEAD
 <body id="reservation"> 
 <img id="img_highQuality" src="559837-PKR0G9-211.jpg">
 <!-- img.png is a full-resolution image. -->
@@ -19,6 +23,8 @@
 
 
 
+=======
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 	<?php
 	include_once 'navbar.php';
 	?>

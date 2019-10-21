@@ -34,7 +34,7 @@ include 'config.php';
 
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link text-white" href="index.html"> About <span
+						<a class="nav-link text-white" href="index.php"> About <span
 								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item dropdown active">
@@ -52,33 +52,47 @@ include 'config.php';
 									<a class="dropdown-item text-white" href="sesirmoj.html">Sesir moj</a>
 								</div>
 					</li>
+			        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
 					<li class="nav-item active">
 						<a class="nav-link text-white" href="Druga.html"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
+					<?php endif; ?>
+					<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
 					<li class="nav-item active">
-						<a class="nav-link text-white" href="#section2"> Register/Login <span
+						<a class="nav-link text-white" href="Logout.php"> Logout <span
 								class="sr-only">(current)</span></a>
 					</li>
+<<<<<<< HEAD
 				
+=======
+					<?php else: ?>
+					<li class="nav-item active">
+								 <a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+									class="sr-only">(current)</span></a>
+									</li>
+                        <?php endif; ?>
+					
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">EN/SR</a>
+					</li>
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 				</ul>
 			</div>
 		</nav>
 	</section>
-
-
-
 	<!--jumbotron section -->
-	<section id="sectionProfil1" class="jumbotron jumbotron-fluid">
+	<section class="sectionProfil1" class="jumbotron jumbotron-fluid">
 	
 		<!--Container for Data from a database class="offset-md-3 col-md-5 offset-md-3 col-12"-->
 		<div class="jumbo">
 <?php
  $name = $_POST['name'];
- $password = hash('sha256', $_POST['pwd']);
+ $password = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
  $email = $_POST['mail'];
 
+<<<<<<< HEAD
 $con = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 
 if (mysqli_connect_errno()){
@@ -86,26 +100,27 @@ if (mysqli_connect_errno()){
 }
 else{
    
+=======
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
-	$query1 = "SELECT * from korisnici WHERE Username=?";
+	$query1 = "SELECT Id, Username, FirstLastName, Email, Password from korisnici WHERE Username=?";
 	if ($stmt = $con->prepare($query1))
 	{
 		$username = $_POST['username'];
 		$stmt->bind_param ('s', $username);
 	if($stmt->execute())
 	
-    $result1 = $stmt->bind_result($col1,$col2,$col3,$col4,$col5);
+    $stmt->bind_result($col1,$col2,$col3,$col4,$col5);
 
 	if($stmt->fetch())
 	{
-        echo "<p style='text-align:center'>User with your usernam already exists in our database. </p>";   
-        echo "<p style='text-align:center'><a  href='index.html'> Go back to Login </a></p>";  
+        echo "<h2 style='text-align:center'>User with your username already exists in our database. </h2>";   
+        echo "<h2 style='text-align:center;'><a style='color:orange'; href='index.php#section2'> Go back to Login </a></h2>";  
     }
 	else
 	{
 		$stmt->free_result();
-		$stmt->close();
-		
+		$stmt->close();	
         
     $query = "INSERT INTO korisnici (Username, FirstLastName, Email, Password) VALUES
 	(?,?,?,?)";
@@ -113,17 +128,16 @@ else{
 	if ($stmt = $con->prepare($query))
 	{
 		$stmt->bind_param ('ssss', $username,$name,$email,$password);
-		$stmt->execute();
 
         if($stmt->execute()){
 			// Records created successfully. Display them and redirect link to Login page
-			echo "<p style='text-align:center> You created your account. Please go to home page and login </p>";
+			echo "<h2 style='text-align:center'> You created your account. Please go to home page and login </h2>";
 			echo "<div class='row'>";
-			echo "<div class='h3 border border-danger rounded bg-white offset-md-1 col-md-7 col-12'>";
+			echo "<div style='padding:3%;'class='h3 border border-danger rounded bg-white offset-md-1 col-md-9 col-12'>";
 			echo "<p> Ime i prezime: ".$name." </p>";
 			echo "<p> Korisnicko ime: ".$username." </p>";
 			echo "<p> Email adresa: ".$email." </p>";
-			echo "<p style='text-align:center'><a  href='index.html #section2'> Go to Login </a></p>"; 
+			echo "<p style='text-align:center;'><a style='color:orange;' href='index.php#section2'> Go to Login </a></p>"; 
 			echo '</div>';
 			echo "</div>";
 			

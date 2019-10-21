@@ -1,11 +1,15 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<?php
+<?php
 	include_once 'metatags.php';
-	?>
-	<title> BelgradeRestos </title>
+?>
+	
+	<title> Restoran Durmitor </title>
 </head>
 
 <body id="durmitor">
@@ -16,6 +20,7 @@
 	<?php
 	include_once 'navbar.php';
 	?>
+
 		<div class="container">
 			<div id="photosDurmitor" class="carousel slide d-none d-sm-block text-center" data-ride="carousel">
 				<ul class="carousel-indicators">
@@ -198,10 +203,17 @@
 		
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
+<<<<<<< HEAD
  			</div>
 		</div>
 	
  <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5"></div>
+=======
+ </div>
+ </div>
+ <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5">
+ </div>
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
  <footer> 
  	<div id="socialnetlinks">

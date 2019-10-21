@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +8,7 @@
 <?php
 	include_once 'metatags.php';
 	?>
-	<title> BelgradeRestos </title>
+	<title> Restoran Dva jelena </title>
 </head>
 
 <body id="dvajelena">
@@ -15,6 +18,7 @@
 	<?php
 	include_once 'navbar.php';
 	?>
+	
 		<div class="container">
 				<div id="photosDvaJelena" class="carousel slide d-none d-sm-block text-center" data-ride="carousel">
 					<ul class="carousel-indicators">
@@ -29,9 +33,7 @@
 						<li data-target="#photosDvaJelena" data-slide-to="8"></li>
 						<li data-target="#photosDvaJelena" data-slide-to="9"></li>
 						<li data-target="#photosDvaJelena" data-slide-to="10"></li>
-						
-						
-						
+								
 						
 					</ul>
 					<div class="carousel-inner">
@@ -160,6 +162,7 @@
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
  </div>
+<<<<<<< HEAD
 	</div>
  <div class="fb-comments" data-href="https://www.facebook.com/dvajelena/" data-width="" data-numposts="5"></div>
 
@@ -175,7 +178,11 @@
 
 </footer>
 
+=======
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
+ </div>
+ <div class="fb-comments" data-href="https://www.facebook.com/dvajelena/" data-width="" data-numposts="5"></div>
 
 </body>
 </html>

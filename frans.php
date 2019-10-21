@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +8,7 @@
 <?php
 	include_once 'metatags.php';
 	?>
-	<title> BelgradeRestos </title>
+	<title> Restoran Frans </title>
 </head>
 
 <body id="frans">
@@ -15,6 +18,7 @@
 	<?php
 	include_once 'navbar.php';
 	?>
+	
 <!--Carousel with restaurant photos-->
 		<div class="container">
 			<div id="photosFrans" class="carousel slide d-none d-sm-block text-center" data-ride="carousel">
@@ -206,6 +210,8 @@ include_once "footer.php";
 ?>
 
  </footer>
+
+
 
 
 </body>

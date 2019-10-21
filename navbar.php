@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 <!--NavigationBar---->
 	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
 
+=======
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 <section id="nav-bar">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,16 +32,34 @@
 							</div>
 								
 							</li>
+<<<<<<< HEAD
 					<li class="nav-item">
 						<a class="nav-link text-white" href="reservation.php"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+=======
+							</li>
+			        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
+					<li class="nav-item active">
+						<a class="nav-link text-white" href="reservation.php"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
+					<?php endif; ?>
+					<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
+					<li class="nav-item active">
+						<a class="nav-link text-white" href="Logout.php"> Logout <span
+>>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
+								class="sr-only">(current)</span></a>
+					</li>
+					<?php else: ?>
+					<li class="nav-item active">
+								 <a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+									class="sr-only">(current)</span></a>
+									</li>
+                        <?php endif; ?>
 					
-
 				</ul>
 			</div>
 		</nav>
