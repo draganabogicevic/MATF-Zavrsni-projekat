@@ -12,19 +12,9 @@ session_start();
 </head>
 
 <body>
-<<<<<<< HEAD
-	
-	
-	<?php
-	include_once 'navbar.php';
-	?>
-
-
-=======
 <?php 
 		include_once 'navbar.php';
 ?>
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 	<!--jumbotron section -->
 	<section id="section1" class="jumbotron jumbotron-fluid">
@@ -56,7 +46,7 @@ session_start();
 					You can see photos and find all information that you need in order to make your choice. </p>
 
 				<h2 id="hurryUp" class="h3"> Hurry up, and start using BelgradeRestos app instantly! </h2>
-				<p class="h4"><a id="button1" href="reservation.php">Make a reservation!</a></p>
+				<p class="h4"><a id="button1" href="#">Make a reservation!</a></p>
 			</div>
 
 		</div>
