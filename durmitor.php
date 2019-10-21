@@ -9,11 +9,10 @@
 </head>
 
 <body id="durmitor">
+
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2188085814821958&autoLogAppEvents=1"></script>
-	<?php 
-		include 'components/navbar.php';
-	?>
+	
 	<?php
 	include_once 'navbar.php';
 	?>
@@ -89,13 +88,14 @@
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#photosDurmitor" data-slide="prev">
-				<p class="carousel-control-prev-icon bg-warning"></p>
+				<p class="carousel-control-prev-icon bg-dark"></p>
 			</a>
 			<a class="carousel-control-next" href="#photosDurmitor" data-slide="next">
-				<p class="carousel-control-next-icon bg-warning"></p>
+				<p class="carousel-control-next-icon bg-dark"></p>
 			</a>
 
 		</div>
+
 		<!--Photos of restaurant for sm devices-->
 		<div class="row d-sm-none">
 			<div class="col-12"><img class="img img-fluid" src=".\photos\durmitor\durmitor1.png"></div>
@@ -158,21 +158,17 @@
 
 			<?php
 			
-			$connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
-			if (mysqli_connect_errno()) {
-			echo 'There is problem with connection: ' . mysqli_connect_error();
-			} else {
+			include_once "config.php";
+
 			$query = 'SELECT * FROM restorani WHERE Name = "Durmitor"';
 							
-			$result = mysqli_query($connection, $query);
+			$result = $con->query($query);
 							
 			if ($result == false) {
 			echo '<div class="jumbotron">';
-			echo 'Error with the query: ' . mysqli_error($connection);
+			echo 'Error with the query: ' . mysqli_error($con);
 			echo '</div>';
 			} else {
-			$number_of_restorani = mysqli_num_rows($result);
-			for ($i = 0; $i < $number_of_restorani; $i++) {
 			$restoran = mysqli_fetch_assoc($result); 
 			echo '<div class="jumbotron text-center" style="background:transparent !important">';
 			echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
@@ -183,23 +179,18 @@
 			echo '<p>' . $restoran["WorkingHours"] . '</p>';
 			echo '</div>';
 			}
-			}
-			mysqli_close($connection);
-			}?>
+			mysqli_close($con);
+			?>
 			
-			</div>
-		<div id="socialnetlinks">
-			<a href="https://www.facebook.com/AmbarBelgrade/?ref=hl" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
-			<a href="https://www.instagram.com/ambar_belgrade/" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
-			<a href="https://www.tripadvisor.rs/Restaurant_Review-g294472-d8178411-Reviews-Ambar-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
 		</div>
+		
 	
 
 		<div class="row">
 			<div id="map" class="col-8 offset-2 mt-0 mb-5">
 			<script>
 			function myMap() {
-			var durmitor= {lat:44.932481, lng:20.396172};
+			var durmitor= {lat:44.822394, lng:20.410847};
 			var map = new google.maps.Map(document.getElementById("map"),{zoom: 15, center: durmitor});
 			var marker = new google.maps.Marker({position: durmitor, map: map});
 		}
@@ -207,11 +198,21 @@
 		
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
- </div>
-	</div>
+ 			</div>
+		</div>
+	
  <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5"></div>
 
-
+ <footer> 
+ 	<div id="socialnetlinks">
+	<a href="https://www.facebook.com/AmbarBelgrade/?ref=hl" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+	<a href="https://www.instagram.com/ambar_belgrade/" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+	<a href="https://www.tripadvisor.rs/Restaurant_Review-g294472-d8178411-Reviews-Ambar-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+	</div>
+<?php
+include_once "footer.php";
+?>
+</footer>
 
 </body>
 </html>

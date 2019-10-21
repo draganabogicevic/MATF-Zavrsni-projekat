@@ -287,7 +287,7 @@ text-align: center;
 
 #durmitor {
   background-image: url(././photos/durmitor/676416-PPSOH9-742.jpg);
-  background-size: 102%;
+  background-size: 104%;
   text-align: center;
 }
 
@@ -355,16 +355,24 @@ text-align: center;
     background-color: white;
 }
 
-#druga {
-  background-image: url(././photos/backgroundImg/559837-PKR0G9-211.jpg);
-  background-size: 100%;
-  
+#reservation {
+  background-repeat: no-repeat;
+  background-image: url(././photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
+  background-size: cover;
+  /* image.jpg is a low-resolution at 30% quality. */
 }
 
-#reservation {
+#img_highQuality {
+   display: none;
+}
+
+
+
+#section2reservation {
   border: rgb(247, 147, 34) solid 2px;
   border-radius: 10px;
   width: 60%;
   margin: auto;
   margin-top: 30px;
 }
+

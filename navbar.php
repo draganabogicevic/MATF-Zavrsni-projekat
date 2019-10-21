@@ -1,3 +1,7 @@
+<!--NavigationBar---->
+	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
+
+
 <section id="nav-bar">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<span class="navbar-brand h1" style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
@@ -25,11 +29,11 @@
 							</div>
 								
 							</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link text-white" href="reservation.php"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link text-white" href="index.php#section2"> Register/Login <span
 								class="sr-only">(current)</span></a>
 					</li>

@@ -11,9 +11,7 @@
 <body id="frans">
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2188085814821958&autoLogAppEvents=1"></script>
-	<?php 
-		include 'components/navbar.php';
-	?>
+	
 	<?php
 	include_once 'navbar.php';
 	?>
@@ -152,44 +150,32 @@
         </div>
         
         <div id="infoRestaurants">
-                <?php
-                $connection=mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
-                if (mysqli_connect_errno()) {
-                    echo 'There is problem with connection: '. mysqli_connect_errno();
-                } else {
-                    $query = 'SELECT * FROM restorani WHERE Name= "Frans"';
+            <?php
+            include_once "config.php";
+            $query = 'SELECT * FROM restorani WHERE Name= "Frans"';
 
-                    $result = mysqli_query($connection, $query);
+            $result = $con->query($query);
 
-                    if($result == false) {
-                        echo '<div class="jumbotron">';
-                        echo 'Error with the query: '.mysqli_error($connection);
-                        echo '</div>';
-                    } else {
-                        $number_of_restorani = mysqli_num_rows($result);
-                        for ($i = 0; $i < $number_of_restorani; $i++) {
-                            $restoran = mysqli_fetch_assoc($result);
-                            echo'<div class="jumbotron text-center" style="background:transparent !important">';
-                            echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
-                            echo '<p>' . $restoran["About"] . '</p>';
-                            echo '<p>' . $restoran["Address"] . '</p>';
-                            echo '<p>' . $restoran["TelephoneNo"] . '</p>';
-                            echo '<p>' . $restoran["Email"] . '</p>';
-                            echo '<p>' . $restoran["WorkingHours"] . '</p>';
-                            echo '</div>';
-                            }
-                            mysqli_close($connection);
-                        }
-                    
-                }
-                ?>
+            if($result == false) {
+        	echo '<div class="jumbotron">';
+        	echo 'Error with the query: '.mysqli_error($con);
+        	echo '</div>';
+            } else {        
+            $restoran = mysqli_fetch_assoc($result);
+        	echo'<div class="jumbotron text-center" style="background:transparent !important">';
+        	echo '<h3 class="display-3">' . $restoran["Name"] . '</h3>';
+        	echo '<p>' . $restoran["About"] . '</p>';
+            echo '<p>' . $restoran["Address"] . '</p>';
+            echo '<p>' . $restoran["TelephoneNo"] . '</p>';
+            echo '<p>' . $restoran["Email"] . '</p>';
+            echo '<p>' . $restoran["WorkingHours"] . '</p>';
+            echo '</div>';
+            }
+            mysqli_close($con);
+        	?>
 
 		</div>
-		<div id="socialnetlinks">
-			<a href="https://www.facebook.com/Fransrestoran/" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
-			<a href="https://www.instagram.com/fransrestoran/?hl=hr" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
-			<a href="https://www.tripadvisor.com/Restaurant_Review-g294472-d802194-Reviews-Frans-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
-		</div>
+		
 	
 
 		<div class="row">
@@ -208,6 +194,18 @@
  </div>
 
  <div class="fb-comments" data-href="https://www.facebook.com/Fransrestoran/" data-width="" data-numposts="5"></div>
+
+ <footer>
+   <div id="socialnetlinks">
+	<a href="https://www.facebook.com/Fransrestoran/" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+	<a href="https://www.instagram.com/fransrestoran/?hl=hr" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+	<a href="https://www.tripadvisor.com/Restaurant_Review-g294472-d802194-Reviews-Frans-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+	</div>
+<?php
+include_once "footer.php";
+?>
+
+ </footer>
 
 
 </body>

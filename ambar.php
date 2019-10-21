@@ -16,9 +16,7 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=2188085814821958&autoLogAppEvents=1"></script>
 
 
-	<?php 
-		include 'components/navbar.php';
-	?>
+	
 	<?php
 	include_once 'navbar.php';
 	?>
@@ -75,22 +73,54 @@
 			</a>
 		
 		</div>
+		<!--Photos of restaurant for sm devices-->
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-2.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-4.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-8-e1442849227964.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-13.jpg"></div>
+		</div>
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-24.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-29.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-30.jpg"></div>
+		</div>
+		
+		<div class="row d-sm-none">
+			<div class="col-12"><img class="img img-fluid" src=".\photos\ambar\ambar-restoran-171.jpg"></div>
+		</div>
+	
+		
+	
 
 		<div id="infoRestaurants">
 
 <?php
 
-$connection = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
-if (mysqli_connect_errno()) {
-echo 'There is problem with connection: ' . mysqli_connect_error();
-} else {
+include_once "config.php";
+
 $query = "SELECT * FROM restorani WHERE Name = 'Ambar.'";
 				
-$result = mysqli_query($connection, $query);
+$result = $con->query($query);
 				
 if ($result == false) {
 echo "<div class='jumbotron'>";
-echo "Error with the query: " . mysqli_error($connection);
+echo "Error with the query: " . $con->error();
 echo "</div>";
 } else {
 $restoran = mysqli_fetch_assoc($result); 
@@ -103,8 +133,8 @@ echo "<p>" . $restoran['Email'] . " </p>";
 echo "<p>" . $restoran['WorkingHours'] . " </p>";
 echo "</div>";
 }
-mysqli_close($connection);
-}?>
+$con->close();
+?>
 
 </div>
 <div class="row">
@@ -123,6 +153,19 @@ mysqli_close($connection);
 </div>
 
 <div class="fb-comments" data-href="https://www.facebook.com/AmbarBelgrade/" data-width="" data-numposts="5" data-colorscheme="dark"></div>
+
+
+<footer> 
+	<div id="socialnetlinks">
+	<a href="https://www.facebook.com/AmbarBelgrade/?ref=hl" target="_blank"><img class="icons" src=".\.\photos\ambar\icon.png" alt="fbicon"></a>
+	<a href="https://www.instagram.com/ambar_belgrade/" target="_blank"><img class="icons" src=".\.\photos\ambar\instagram.png" alt="insticon"></a>
+	<a href="https://www.tripadvisor.rs/Restaurant_Review-g294472-d8178411-Reviews-Ambar-Belgrade.html" target="_blank"><img class="icons" src=".\.\photos\ambar\tripadvisor-logotype.png" alt="tripadicon"></a>
+	</div>
+<?php
+include_once "footer.php";
+?>
+
+</footer>
 </body>
 </html>
 		

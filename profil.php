@@ -60,9 +60,7 @@ include 'config.php';
 						<a class="nav-link text-white" href="#section2"> Register/Login <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">EN/SR</a>
-					</li>
+				
 
 				</ul>
 			</div>
@@ -81,7 +79,6 @@ include 'config.php';
  $password = hash('sha256', $_POST['pwd']);
  $email = $_POST['mail'];
 
-<<<<<<< HEAD
 $con = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
 
 if (mysqli_connect_errno()){
@@ -89,8 +86,6 @@ if (mysqli_connect_errno()){
 }
 else{
    
-=======
->>>>>>> cfb08e6371d6187a5c8094191ea8cf0802248a76
 
 	$query1 = "SELECT * from korisnici WHERE Username=?";
 	if ($stmt = $con->prepare($query1))
