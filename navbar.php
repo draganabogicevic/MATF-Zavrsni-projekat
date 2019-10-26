@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 <!--NavigationBar---->
 	<!-- Grey navigation bar with right-aligned white links and orange navbar-brand-->
 
+=======
+>>>>>>> defc17b90bd8a573f2d061cea360c9983d4b5390
 
 <section id="nav-bar">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,12 +32,16 @@
 							</div>
 								
 							</li>
-					<li class="nav-item">
+							</li>
+			        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
+					<li class="nav-item active">
 						<a class="nav-link text-white" href="reservation.php"> Reservation <span
 								class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="index.php#section2"> Register/Login <span
+					<?php endif; ?>
+					<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
+					<li class="nav-item active">
+						<a class="nav-link text-white" href="Logout.php"> Logout <span
 								class="sr-only">(current)</span></a>
 					</li>
 					<?php ?>
