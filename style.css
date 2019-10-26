@@ -277,11 +277,13 @@ text-align: center;
   background-color: white;
 }
 
-<<<<<<< HEAD
 #reservation {
   background-repeat: no-repeat;
   background-image: url(././photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
   background-size: cover;
+  
+  
+
   /* image.jpg is a low-resolution at 30% quality. */
 }
 
@@ -297,20 +299,6 @@ text-align: center;
   width: 60%;
   margin: auto;
   margin-top: 30px;
+  font-family: "My Custom Font";
 }
 
-=======
-#druga {
-background-image: url(././photos/backgroundImg/559837-PKR0G9-211.jpg);
-background-size: 100%;
-
-}
-
-#reservation {
-border: rgb(247, 147, 34) solid 2px;
-border-radius: 10px;
-width: 60%;
-margin: auto;
-margin-top: 30px;
-}
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575

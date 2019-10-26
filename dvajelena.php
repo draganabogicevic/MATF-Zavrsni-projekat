@@ -162,7 +162,6 @@ session_start();
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
  </div>
-<<<<<<< HEAD
 	</div>
  <div class="fb-comments" data-href="https://www.facebook.com/dvajelena/" data-width="" data-numposts="5"></div>
 
@@ -178,8 +177,6 @@ session_start();
 
 </footer>
 
-=======
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
  </div>
  <div class="fb-comments" data-href="https://www.facebook.com/dvajelena/" data-width="" data-numposts="5"></div>

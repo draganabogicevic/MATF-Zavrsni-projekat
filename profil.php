@@ -63,9 +63,6 @@ include 'config.php';
 						<a class="nav-link text-white" href="Logout.php"> Logout <span
 								class="sr-only">(current)</span></a>
 					</li>
-<<<<<<< HEAD
-				
-=======
 					<?php else: ?>
 					<li class="nav-item active">
 								 <a class="nav-link text-white" href="index.php#section2"> Register/Login <span
@@ -76,7 +73,6 @@ include 'config.php';
 					<li class="nav-item">
 						<a class="nav-link text-white" href="#">EN/SR</a>
 					</li>
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 				</ul>
 			</div>
@@ -92,16 +88,6 @@ include 'config.php';
  $password = password_hash($_POST['pwd'], PASSWORD_DEFAULT);
  $email = $_POST['mail'];
 
-<<<<<<< HEAD
-$con = mysqli_connect('localhost', 'root', '', 'dbzavrsniprojekat');
-
-if (mysqli_connect_errno()){
-    echo "<p style='text-align:center'> Greska u konekciji sa bazom ".mysqli_connect_error()."</p>";
-}
-else{
-   
-=======
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 	$query1 = "SELECT Id, Username, FirstLastName, Email, Password from korisnici WHERE Username=?";
 	if ($stmt = $con->prepare($query1))

@@ -203,17 +203,10 @@ session_start();
 		
 		</script>
    		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDroNv_bFL6FwIAt9deCJ_b4u2cPbYWDHE&callback=myMap"></script>
-<<<<<<< HEAD
  			</div>
 		</div>
 	
  <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5"></div>
-=======
- </div>
- </div>
- <div class="fb-comments" data-href="https://www.facebook.com/pages/Restoran-Durmitor/278331272243378" data-width="" data-numposts="5">
- </div>
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
  <footer> 
  	<div id="socialnetlinks">

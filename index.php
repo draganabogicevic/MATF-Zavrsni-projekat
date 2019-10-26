@@ -12,7 +12,6 @@ session_start();
 </head>
 
 <body>
-<<<<<<< HEAD
 	
 	
 	<?php
@@ -20,11 +19,6 @@ session_start();
 	?>
 
 
-=======
-<?php 
-		include_once 'navbar.php';
-?>
->>>>>>> b3b31560bd2b8cb3a8064f4645cea77394ae4575
 
 	<!--jumbotron section -->
 	<section id="section1" class="jumbotron jumbotron-fluid">
