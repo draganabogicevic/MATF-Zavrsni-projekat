@@ -178,8 +178,6 @@ session_start();
 </footer>
 
 
- </div>
- <div class="fb-comments" data-href="https://www.facebook.com/dvajelena/" data-width="" data-numposts="5"></div>
-
+ 
 </body>
 </html>

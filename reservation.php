@@ -110,5 +110,5 @@ include_once 'navbar.php';
 
 
 <script src="reservationFormValidation.js"></script>
-
+</body>
 </html>
