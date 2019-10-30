@@ -12,7 +12,7 @@ include_once "config.php";
 <?php
 	include_once 'metatags.php';
 ?>
-<title> Login </title>
+<title> Edit Profile </title>
 </head>
 
 <body>
@@ -27,10 +27,10 @@ include_once "config.php";
 		<div class="jumbo">
 <?php
 
-if(empty($_POST['fname'])) {
+if(empty($_POST['fnName'])) {
     $flname = $_SESSION['name'];
  } else {
-    $flname = $_POST['fname'];
+    $flname = $_POST['fnName'];
  }
 
     if(empty($_POST['uname'])) {
@@ -51,8 +51,8 @@ if ($con->connect_error) {
 }
 else{
 $sql = "UPDATE korisnici
-SET FirstLastName =".$flname.", Username = ".$username.", Email = ".$email. 
-"WHERE Username = ".$username;
+SET FirstLastName = $flname, Username = $username , Email = $email
+WHERE Username = $username";
 
 if ($con->query($sql) === TRUE) {
     echo "Record updated successfully!";

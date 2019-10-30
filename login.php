@@ -49,9 +49,10 @@ include 'config.php';
                             /* Password is correct, so start a new session and
                             save the data about user in the session array */
                             $_SESSION['username'] = $username;
-                            $_SESSiON['name'] = $nameCol;
+                            $_SESSiON['ime'] = $nameCol;
                             $_SESSION['email'] = $emailCol;
                             $_SESSION['logged_in'] = true;
+                           
                             echo "<h2 style='text-align:center'>You logged in succesfully. </h2>";   
                             echo "<h2 style='text-align:center;'> You can check our restaurants offer 
                             and<a style='color:black; text-decoration: underline; text-decoration-color: orange; ' href='Reservation.php'> make a reservation.  </a></h2>";

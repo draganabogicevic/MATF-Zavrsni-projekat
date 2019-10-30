@@ -46,7 +46,7 @@
                         <?php endif;  ?>
 						<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
 					<li class="nav-item active">
-						<a class="nav-link text-white" href="editUserProfil.php"> <?php echo $_SESSION['username']." Profile";   ?> <span
+						<a class="nav-link text-white" href="editUserProfil.php"> <?php echo $_SESSION['username']."'s Profile";   ?> <span
 								class="sr-only">(current)</span></a>
 					</li>
 					<?php endif; ?>

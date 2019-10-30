@@ -20,7 +20,7 @@ include_once 'metatags.php';
 <?php
 include_once 'navbar.php';
 ?>
-    <div id="editProfile" class="container-fluid mt-5 mb-3 text-dark">
+    <div id="editProfile" class="container-fluid">
   
 		<div >
 
@@ -36,7 +36,7 @@ include_once 'navbar.php';
                      
                 <div class="row">
                     <div class="offset-1 col-md-5">
-                    <h4> <?php echo $_SESSION['username']." Profile"; ?> </h4>
+                    <h4> <?php echo $_SESSION['username']."'s Profile"; ?> </h4>
                     </div>
 
                     <div class="col-md-5">
@@ -46,11 +46,11 @@ include_once 'navbar.php';
 
                 <div class="row">
                     <div class="offset-1 col-md-5">
-                    <p>Firstname and lastname:  <?php echo $_SESSION['name'];   ?></p>
+                    <p>Firstname and lastname: <?php echo $_SESSION['ime'];   ?></p>
                     </div>
 
                     <div class="col-md-5">
-                    <input class="form-control" type=text id="fnName" name="fnName">
+                    <input class="form-control" type="text" id="fnName" name="fnName">
                     </div>
                 </div>
                 <br>
@@ -79,7 +79,8 @@ include_once 'navbar.php';
 
                 <div class="row">
                     <div class="offset-1 col-md-5">		
-						<input id="signIn" class="btn btn-success" name="delete" type="submit" value="Delete">
+                        <button id="signIn" class="btn btn-success" name="delete" type="button" 
+                        onclick="location.href='delete.php'" value="Delete">Delete</button>
                     </div>
 
                     <div class="col-md-5">		
