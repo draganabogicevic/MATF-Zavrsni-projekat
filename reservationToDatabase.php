@@ -25,34 +25,33 @@ $reservationTime = $_POST["reservationTime"];
 $restaurant = $_POST["restaurants"];
 $tableNo = $_POST["tableNo"];
 
+
 include_once "config.php";
 
-$queryForRestId = 'SELECT id FROM restorani WHERE Name = $restaurant';
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+else{
+
+$queryForRestId = 'SELECT id FROM restorani WHERE Name ='.$restaurant;
 
 $resultRestId = $con->query($queryForRestId);
-if (is_object($resultRestId)){
-if ($resultRestId->num_rows > 0) {
-    $restaurantId = $resultRestId;
-};
+$number_of_posts = $resultRestId->num_rows;
+if ($number_of_posts > 0) {
+	$restID = $con->fetch_assoc($resultRestId);
+    $restaurantId = $restID['Id'];
 };
 
- $username = $_SESSION['username'];
 
-$queryForUesrId = 'SELECT id FROM korisnici WHERE Name = $username';
+$username = $_SESSION['username'];
 
-$resultUserId = $con->query($queryForUesrId);
-if (is_object($resultUserId)){
-if ($resultUserId->num_rows > 0) {
-    $userId = $resultUserId;
-};
-};
 
 $querySendResData = "INSERT INTO rezervacije (UserId, RestaurantId, TableNo, ReservationDate, ReservationTime) VALUES
 (?,?,?,?,?)";
 
 if ($stmt = $con->prepare($querySendResData))
 {
-    $stmt->bind_param ('iiiii', $userId,$restaurantId,$tableNo,$reservationDate, $reservationTime);
+    $stmt->bind_param ('iiiii', $username,$restaurantId,$tableNo,$reservationDate, $reservationTime);
 
     if($stmt->execute()){
             echo "<h2 style='text-align:center'> You successfully made request for reservation and you may expect reservation confirmation on your email address. </h2>";
@@ -65,6 +64,7 @@ if ($stmt = $con->prepare($querySendResData))
 		} else{
 			echo "Something went wrong. Please try again later.";
 		}
+	}
 }
 
 ?>

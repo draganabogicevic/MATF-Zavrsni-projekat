@@ -29,7 +29,7 @@ include 'config.php';
     $username = $_POST ['username2'];
     $password = $_POST ['pwd2'];
     
-	$sql = "SELECT Username, Password FROM korisnici WHERE Username = ?";
+	$sql = "SELECT Username, FirstLastName, Email, Password FROM korisnici WHERE Username = ?";
         if($stmt = $con->prepare($sql))
         {
             // Bind variables to the prepared statement 
@@ -41,14 +41,16 @@ include 'config.php';
                 // Check if username exists, if yes then verify password
                 if($stmt->num_rows == 1)
                 {
-                    $stmt->bind_result($username, $passwordCol);
+                    $stmt->bind_result($username, $nameCol, $emailCol, $passwordCol);
                     if($stmt->fetch())
                     {
                         if(password_verify($password, $passwordCol))
                         {
                             /* Password is correct, so start a new session and
-                            save the username to the session */
+                            save the data about user in the session array */
                             $_SESSION['username'] = $username;
+                            $_SESSiON['name'] = $nameCol;
+                            $_SESSION['email'] = $emailCol;
                             $_SESSION['logged_in'] = true;
                             echo "<h2 style='text-align:center'>You logged in succesfully. </h2>";   
                             echo "<h2 style='text-align:center;'> You can check our restaurants offer 

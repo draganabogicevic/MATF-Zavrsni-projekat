@@ -114,7 +114,7 @@ body
   width: 100%;
 }
 
- #section2{
+ #section2, #editProfile{
   font-family: "My Custom Font";
   color:white;
   background: url(././photos/index/section2pic1.jpg) no-repeat;
@@ -192,7 +192,6 @@ body
   /* background-size: contain; */
   min-height: 650px;
   width: 100%;
-
 }
  .jumbo {
 padding-top: 2%;
