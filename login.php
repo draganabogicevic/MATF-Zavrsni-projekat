@@ -49,7 +49,7 @@ include 'config.php';
                             /* Password is correct, so start a new session and
                             save the data about user in the session array */
                             $_SESSION['username'] = $username;
-                            $_SESSiON['ime'] = $nameCol;
+                            $_SESSION['name'] = $nameCol;
                             $_SESSION['email'] = $emailCol;
                             $_SESSION['logged_in'] = true;
                            

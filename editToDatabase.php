@@ -51,8 +51,8 @@ if ($con->connect_error) {
 }
 else{
 $sql = "UPDATE korisnici
-SET FirstLastName = $flname, Username = $username , Email = $email
-WHERE Username = $username";
+SET FirstLastName = '$flname', Username = '$username' , Email = '$email'
+WHERE Username = '$username'";
 
 if ($con->query($sql) === TRUE) {
     echo "Record updated successfully!";

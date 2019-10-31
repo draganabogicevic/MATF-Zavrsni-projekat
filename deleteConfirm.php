@@ -21,17 +21,22 @@ include_once "navbar.php";
 <!--User's account will be definitely deleted only if they confirm their selection.  -->
 
 <?php
-$username = $_SESSION["username"];
-
 
 include_once "config.php";
+
 
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 }
 else{
+    if (isset($_SESSION["username"])) {
+        $loggenOnUser = $_SESSION["username"]; 
+        
+       
+
 $sql = "DELETE FROM korisnici
-WHERE Username = $username";
+WHERE Username = '$loggenOnUser'";
+    
 
 if ($con->query($sql) === TRUE) {
     echo "<h2 style='text-align:center'>You deleted your account succesfully. </h2>";   
@@ -42,7 +47,7 @@ if ($con->query($sql) === TRUE) {
     echo "Error deleting record: " . $con->error;
 }
 }
-
+}
 $con->close();
 
 session_destroy();
@@ -51,7 +56,7 @@ session_destroy();
 
 ?>
 
-?>
+
 
     </section>
 </body>

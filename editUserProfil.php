@@ -46,7 +46,7 @@ include_once 'navbar.php';
 
                 <div class="row">
                     <div class="offset-1 col-md-5">
-                    <p>Firstname and lastname: <?php echo $_SESSION['ime'];   ?></p>
+                    <p>Firstname and lastname: <?php echo $_SESSION['name'];   ?></p>
                     </div>
 
                     <div class="col-md-5">
