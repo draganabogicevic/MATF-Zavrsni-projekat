@@ -5,16 +5,16 @@ session_start();
 <html>
 
 <head>
-<?php
-	include_once 'metatags.php';
-?>
-<title> BelgradeRestos </title>
+	<?php
+		include_once 'partials\metatags.php';
+	?>
+	<title> BelgradeRestos </title>
 </head>
 
 <body>
-<?php 
-		include_once 'navbar.php';
-?>
+	<?php 
+		include_once 'partials\navbar.php';
+	?>
 
 	<!--jumbotron section -->
 	<section id="section1" class="jumbotron jumbotron-fluid">
@@ -60,53 +60,53 @@ session_start();
 		<div id="register-login">
 
 			<div id= "reg" class="wrapper">
-			<h2 style="text-align:center; font-family: 'My Custom Font';">Register</h2>
-			<form id = "formRegister" action="profil.php" method="post">
+				<h2 style="text-align:center; font-family: 'My Custom Font';">Register</h2>
+				<form id = "formRegister" action="profil.php" method="post">
 				
-				<div class="form-group contact h5">
-					<div>
-						<label>First and Last Name: </label>
-						<input class="form-control" type="text" id="fName" name="name" placeholder=" ">
-						<p id='errorName' class='error' hidden>Only letters acceptable, min-length:4, max-lengh:40. </p>
+					<div class="form-group contact h5">
+						<div>
+							<label>First and Last Name: </label>
+							<input class="form-control" type="text" id="fName" name="name" placeholder=" ">
+							<p id='errorName' class='error' hidden>Only letters acceptable, min-length:4, max-lengh:40. </p>
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group contact h5">
-					<div>
-						<label> Username: </label>
-						<input class="form-control" id="username" type="text" name="username" placeholder="">
-						<p id='errorUsername' class='error' hidden>Your username must contain between 1 and 15 characters (letters and/or digits).</p>
+					<div class="form-group contact h5">
+						<div>
+							<label> Username: </label>
+							<input class="form-control" id="username" type="text" name="username" placeholder="">
+							<p id='errorUsername' class='error' hidden>Your username must contain between 1 and 15 characters (letters and/or digits).</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group contact h5">
-					<div>
-						<label> Email Address: </label>
-						<input class="form-control" id="mail" type="email" name="mail" placeholder="">
-						<p id='errorEmail' class='error' hidden>Enter valid email address.</p>
+					<div class="form-group contact h5">
+						<div>
+							<label> Email Address: </label>
+							<input class="form-control" id="mail" type="email" name="mail" placeholder="">
+							<p id='errorEmail' class='error' hidden>Enter valid email address.</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group contact h5">
-					<div>
-						<label> Password: </label>
-						<input class="form-control" id="pwd" type="password" name="pwd" placeholder="">
-						<p id='errorPass' class='error' hidden>Your password must contain at least 6 (max 15) characters - both letters and digits.</p>
+					<div class="form-group contact h5">
+						<div>
+							<label> Password: </label>
+							<input class="form-control" id="pwd" type="password" name="pwd" placeholder="">
+							<p id='errorPass' class='error' hidden>Your password must contain at least 6 (max 15) characters - both letters and digits.</p>
+						</div>
 					</div>
-				</div>
 
 					<div class="form-group btnDiv h5">		
 						<input class="btn btn-success" name="regg" type="submit" id="signUp" value="Sign up">
 					</div>
-			</form>
-			<p class="h5">Already have an account?</p>
-			<p><a href="#section2" class = "toggles" id="toggle-login" style="font-size: 29px;">Login</a> </p>
-		</div>
+				</form>
+				<p class="h5">Already have an account?</p>
+				<p><a href="#section2" class = "toggles" id="toggle-login" style="font-size: 29px;">Login</a> </p>
+			</div>
 
 
-<div id = "log" class="wrapper"> 
+			<div id = "log" class="wrapper"> 
 			<h2 style="text-align:center; font-family: 'My Custom Font';">Login</h2>
-			<form id = "formLogin" action="login.php" method="POST">
+				<form id = "formLogin" action="login.php" method="POST">
 
 				<div class="form-group contact h5">
 					<div>
@@ -124,21 +124,27 @@ session_start();
 					</div>
 				</div>
 					
-					<div class="form-group btnDiv h5">		
-						<input id="signIn" class="btn btn-success" name="logg" type="submit" value="Sign in">
-					</div>
+				<div class="form-group btnDiv h5">		
+					<input id="signIn" class="btn btn-success" name="logg" type="submit" value="Sign in">
+				</div>
 
-			</form>
+				</form>
 			<p class="h5">Need to create an account?</p>
 			<p><a href="#section2" class = "toggles" id="toggle-signup" style="font-size: 29px;">Register</a> </p>
-		</div>
+			</div>
 		
 		</div>
 	</div>
+	<footer>
+   
+		<?php
+			include_once "partials/pageFooter.php";
+		?>
 
+ 	</footer>
 </body>
-<script src="jsCode1.js"></script>
-<script src="formValidation.js"></script>
-<script src="formValidation2.js"></script>
+<script src="js\jsCode1.js"></script>
+<script src="js\formValidation.js"></script>
+<script src="js\formValidation2.js"></script>
 
 </html>

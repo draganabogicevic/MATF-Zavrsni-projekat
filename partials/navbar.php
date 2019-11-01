@@ -1,5 +1,5 @@
 
-<section id="nav-bar">
+<section id="nav-bar mb-5">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<span class="navbar-brand h1" style="color:orange; font-family: 'My Custom Font'; font-size:24px;">BelgradeRestos</span>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,8 +20,8 @@
 								<a class="dropdown-item text-white" href="lorenco.php">Lorenco i Kakalamba</a>
 								<a class="dropdown-item text-white" href="lovac.php">Lovac</a>
 								<a class="dropdown-item text-white" href="madera.php">Madera</a>
-								<a class="dropdown-item text-white" href="malafabrikaukusa.php">Mala fabrika ukusa</a>
-								<a class="dropdown-item text-white" href="sesirmoj.php">Sesir moj</a>
+							<!--<a class="dropdown-item text-white" href="malafabrikaukusa.php">Mala fabrika ukusa</a>
+								<a class="dropdown-item text-white" href="sesirmoj.php">Sesir moj</a>-->
 		
 							</div>
 								

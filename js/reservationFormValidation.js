@@ -8,23 +8,26 @@ var reservationTime = $("#timepicker").val();
 
 // Validating Pick a restaurant Field.
 if (restaurant === "") {
-    alert("Pleease, pick a restaurant!");
+    $(".error").attr('hidden','hidden');    
+    $('#errorRestaurant').removeAttr('hidden');
     return false;
 };
 // Validating Table number Field.
 if (tableNo === "" || tableNo<1 || tableNo>10) {
-    alert("Pleease, enter correct table number (1-10)!");
+    $(".error").attr('hidden','hidden');    
+    $('#errorTableNo').removeAttr('hidden');
     return false;
 };
 // Validating reservation date Field.
 $('.datepicker').datepicker({
-          onRender: function(date) {
-            return date.valueOf() < new Date().valueOf() ? 'disabled' : '';
-        }
+    onRender: function(date) {
+    return date.valueOf() < new Date().valueOf() ? 'disabled' : '';
+    }
     }); 
    
 if (reservationDate === "") {
-    alert("Pleease, enter valid reservation date!");
+    $(".error").attr('hidden','hidden');    
+    $('#errorDate').removeAttr('hidden');
     return false;
 };
 
@@ -34,18 +37,21 @@ if (reservationDate === "") {
   var resDate = Date.parse(reservationDate);
        if (resDate < today)
    {
-   alert("Date must be in the future");
+    $(".error").attr('hidden','hidden');    
+    $('#errorDate').removeAttr('hidden');
    return false;
   }; 
   // Validating reservation time Field.
   if (reservationTime === "") {
-    alert("Please enter reservation time.");
+    $(".error").attr('hidden','hidden');    
+    $('#errorTime').removeAttr('hidden');
     return false;
   };
  var nonWorkingHours = reservationTime.split(':')[0]; 
- if(parseInt(nonWorkingHours)>1 & parseInt(nonWorkingHours)<9)
+ if(parseInt(nonWorkingHours)>1 && parseInt(nonWorkingHours)<9)
  {
-  alert("The restaurant is closed in selected time, please change reservation time");
+    $(".error").attr('hidden','hidden');    
+    $('#errorTime').removeAttr('hidden');
   return false;
   };
 });

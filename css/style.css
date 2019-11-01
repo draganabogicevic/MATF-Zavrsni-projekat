@@ -25,6 +25,13 @@ body
 {
   color:rgb(255, 165, 0) !important;
 }
+.dropdown-item:hover
+{
+  color:rgb(255, 165, 0) !important;
+  background: none;
+}
+
+
 @keyframes myanimation {
 0% {
     left: 0%;
@@ -117,7 +124,7 @@ body
  #section2, #editProfile{
   font-family: "My Custom Font";
   color:white;
-  background: url(././photos/index/section2pic1.jpg) no-repeat;
+  background: url(../photos/index/section2pic1.jpg) no-repeat;
   background-size: 100% 100%;
   min-height: 650px;
   width: 100%;
@@ -126,8 +133,8 @@ body
   padding-bottom: 6%;
 } 
 #editProfile{
-  background: url(././photos/edit/picEdit.jpg) no-repeat;
-  background-size: 100% 100%;
+  background: url(../photos/edit/picEdit.jpg) no-repeat;
+  background-size: cover;
   margin:0%;
   color:rgb(37, 252, 9);
 }
@@ -210,48 +217,48 @@ padding-bottom:2%;
 }
 
 #ambar {
-background-image: url(././photos/ambar/2478036.jpg);
-background-size: 110%;
+background-image: url(../photos/ambar/2478036.jpg);
+background-size: cover;
 text-align: center;
 }
 
 #durmitor {
-  background-image: url(././photos/durmitor/676416-PPSOH9-742.jpg);
-  background-size: 104%;
+  background-image: url(../photos/durmitor/676416-PPSOH9-742.jpg);
+  background-size: cover;
   text-align: center;
 }
 
 #dvajelena {
-  background-image: url(././photos/dvaJelena/267973-P55Y9G-21.jpg);
-  background-size: 100%;
+  background-image: url(../photos/dvaJelena/267973-P55Y9G-21.jpg);
+  background-size: cover;
   text-align: center;
 }
 
 #frans {
-  background-image: url(././photos/frans/182091-OWONUF-759.jpg);
-  background-size: 100%;
+  background-image: url(../photos/frans/182091-OWONUF-759.jpg);
+  background-size: cover;
   text-align: center;
 }
 
 #lorenco {
-  background-image: url(././photos/Lorenco/549559-PJZUF5-102.jpg);
-  background-size: 100%;
+  background-image: url(../photos/Lorenco/549559-PJZUF5-102.jpg);
+  background-size: cover;
   text-align: center;
 }
 #lovac {
-  background-image: url(././photos/Lovac/182115-OWONVK-687.jpg);
-  background-size: 100%;
+  background-image: url(../photos/Lovac/182115-OWONVK-687.jpg);
+  background-size: cover;
   text-align: center;
 }
 #madera {
-  background-image: url(././photos/madera/642230-POM9DO-545.jpg);
-  background-size: 100%;
+  background-image: url(../photos/madera/642230-POM9DO-545.jpg);
+  background-size: cover;
   text-align: center;
 }
 
 #infoRestaurants {
   font-family: "My Custom Font";
-  color: orange;
+  
 }
 #map {
   width: 60%;
@@ -260,7 +267,7 @@ text-align: center;
   border: 5px white solid;
 }
 
-.icons {
+.icons, #in {
   height: 30px;
   width: 30px;
 }
@@ -284,7 +291,7 @@ text-align: center;
 
 #reservation {
   background-repeat: no-repeat;
-  background-image: url(././photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
+  background-image: url(../photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
   background-size: cover;
   
   
@@ -305,5 +312,20 @@ text-align: center;
   margin: auto;
   margin-top: 30px;
   font-family: "My Custom Font";
+}
+
+.icons-footer {
+  height: 45px;
+  width: 110px;
+}
+
+footer {
+  font-family: "My Custom Font";
+  text-align: center;
+}
+
+#reservationToDatabase {
+  font-family: "My Custom Font";
+  background-color: rgb(61, 190, 61);
 }
 
