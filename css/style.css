@@ -1,0 +1,382 @@
+body
+{
+  background-color: lemonchiffon;
+  width:100%;
+  height:100%;
+}
+.nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.navbar-brand 
+{
+	padding-left:50px!important; 
+}
+
+.nav-link
+{
+	font-weight:600;
+	font-size: 16px;
+	padding-right: 20px!important;
+}
+.nav-link:hover
+{
+  color:rgb(255, 165, 0) !important;
+}
+.dropdown-item:hover
+{
+  color:rgb(255, 165, 0) !important;
+  background: none;
+}
+
+
+@keyframes myanimation {
+0% {
+    left: 0%;
+}
+25% {
+  left:25%;
+}  
+50% {
+  left:50%;
+}  
+75%{
+  left:75%;
+}
+100%{
+  left:100%;
+}
+} 
+
+@-webkit-keyframes myanimation{
+  
+    0% {
+        left: 0%;
+    }
+  25% {
+      left:25%;
+    }  
+    50% {
+      left:50%;
+    }  
+    75%{
+      left:75%;
+    }
+    100%{
+      left:100%;
+    }
+} 
+.photos {
+  position: absolute;
+  left: -10%;
+  animation-duration: 12s;
+   animation-name: myanimation;
+  -webkit-animation-name: myanimation;
+  animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 10;
+  animation-timing-function: linear; 
+}
+
+#img5 {
+  animation-delay: 2s;
+}
+#img4 { 
+  animation-delay: 4s;
+}
+
+#img3 {
+  animation-delay: 6s;
+}
+#img2{
+  animation-delay: 8s;
+}
+#img1{
+  animation-delay: 10s;
+} 
+
+ @font-face {
+  font-family: "My Custom Font";
+  src: url("Lobster.otf");
+}
+
+@font-face {
+  font-family: "My Custom Font3";
+  src: url("Bradley-Regular.ttf");
+}
+
+@font-face {
+  font-family: "My Custom Font2";
+  src: url("DaddyRewind.ttf");
+}
+.sectionProfil1
+{
+  font-family: "My Custom Font";
+  color: black;
+  font-size:20px;
+  padding:40px;
+  background-color: rgb(61, 190, 61);
+  min-height: 650px;
+  width: 100%;
+}
+
+ #section2, #editProfile{
+  font-family: "My Custom Font";
+  color:white;
+  background: url(../photos/index/section2pic1.jpg) no-repeat;
+  background-size: 100% 100%;
+  min-height: 650px;
+  width: 100%;
+  margin:auto; 
+  padding-top:8%;
+  padding-bottom: 6%;
+} 
+#editProfile{
+  padding-top: 3%;
+  background: url(../photos/edit/picEdit.jpg) no-repeat;
+  background-size: cover;
+  margin:0%;
+  color:white;
+}
+
+#register-login{
+  /* padding-top: 10%; */
+  margin:auto;
+  width: 50%;
+  height:auto;
+  border: rgb(247, 147, 34) solid 2px;
+  border-radius: 10px;
+  padding-top:2%;
+}
+
+.btnDiv{
+ text-align: center;
+ padding-bottom: 2%;
+ padding-top:2%;
+}
+.wrapper{
+  padding:2%;
+}
+.form-control{
+  outline: 1px solid rgb(247, 147, 34);
+}
+.toggles{
+  color:orangered;
+  text-decoration: underline;
+}
+.error{
+  color:red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:15px;
+}
+
+#subheading1 {
+  color:white;
+  margin-bottom: 25px;
+  /* text-decoration: underline; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#hurryUp {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#button1 {
+  display:inline-block;
+  border-radius: 10%;
+  background-color: rgb(247, 147, 34);
+  color:white;
+  padding: 2%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.animPhotos {
+  position:relative;
+  padding-top:2%;
+  margin:0%;
+  left:0%;
+  padding-bottom:2%;
+}
+#section1 {
+  margin:0%;
+  padding:0%;
+  font-family: "My Custom Font";
+  box-sizing: border-box;
+  background-color: rgb(61, 190, 61);
+  /* background-size: contain; */
+  min-height: 650px;
+  width: 100%;
+}
+ .jumbo {
+padding-top: 2%;
+padding-left:20%;
+padding-right: 20%;
+padding-bottom:2%;
+} 
+#about{
+  padding: 2%;
+}
+
+#ambar {
+background-image: url(../photos/ambar/2478036.jpg);
+background-size: cover;
+text-align: center;
+}
+
+#durmitor {
+  background-image: url(../photos/durmitor/676416-PPSOH9-742.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+#dvajelena {
+  background-image: url(../photos/dvaJelena/267973-P55Y9G-21.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+#frans {
+  background-image: url(../photos/frans/182091-OWONUF-759.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+#lorenco {
+  background-image: url(../photos/Lorenco/549559-PJZUF5-102.jpg);
+  background-size: cover;
+  text-align: center;
+}
+#lovac {
+  background-image: url(../photos/Lovac/182115-OWONVK-687.jpg);
+  background-size: cover;
+  text-align: center;
+}
+#madera {
+  background-image: url(../photos/madera/642230-POM9DO-545.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+#infoRestaurants {
+  font-family: "My Custom Font";
+  
+}
+#map {
+  width: 60%;
+  height: 500px;
+  background-color: grey;
+  border: 5px white solid;
+}
+
+.icons, #in {
+  height: 30px;
+  width: 30px;
+}
+#socialnetlinks {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#phoneNo {
+  text-decoration: none;
+}
+
+.jumbotron {
+  width: 80%;
+  margin: auto;
+}
+
+.fb-comments {
+  background-color: white;
+}
+
+#reservation {
+  background-repeat: no-repeat;
+  background-image: url(../photos/backgroundImg/559837-PKR0G9-211lowresolution.jpg);
+  background-size: cover;
+  
+  
+
+  /* image.jpg is a low-resolution at 30% quality. */
+}
+
+#img_highQuality {
+   display: none;
+}
+
+
+
+#section2reservation {
+  border: rgb(247, 147, 34) solid 2px;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  font-family: "My Custom Font";
+}
+
+.icons-footer {
+  height: 45px;
+  width: 110px;
+}
+
+footer {
+  font-family: "My Custom Font";
+  text-align: center;
+}
+
+#reservationToDatabase {
+  font-family: "My Custom Font";
+  background-color: rgb(61, 190, 61);
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #db7734;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
